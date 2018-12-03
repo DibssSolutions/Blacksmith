@@ -1,0 +1,52 @@
+.header
+	+helvetica
+	background-color: $white
+	font-weight: 700
+	+md
+		font-size: 16px
+
+	&__container
+		display: flex
+		align-items: center
+		min-height: 65px
+		+sm
+			justify-content: center
+			flex-wrap: wrap
+			padding: 15px
+
+	&__logo
+
+	&__nav
+		margin-left: 60px
+		+md
+			margin-left: 20px
+		+sm
+			max-width: 480px
+			margin-top: 12px
+			margin-left: 0
+			width: 100%
+			order: 1
+
+	&__feedback
+		display: flex
+		justify-content: space-between
+		margin-left: auto
+		min-width: 324px
+		+md
+			min-width: 280px
+		+sm
+			min-width: auto
+			display: flex
+			flex-direction: column
+
+	&__link
+		font-size: 15px
+		display: flex
+		align-items: center
+		color: black
+		+hover
+			text-decoration: underline
+		.icon
+			margin-right: 9px
+		+sm
+			margin-left: 24px
