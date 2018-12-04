@@ -1,8 +1,9 @@
 .project
 	+helvetica
 	will-change: transform
-	transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
-
+	transform: rotateX(0deg) rotateY(0deg)
+	transition: transform 300ms
+	perspective: 1000px
 	width: 50%
 	max-width: calc(50% - 16px)
 	margin-top: 30px
@@ -11,6 +12,8 @@
 	+sm
 		width: 100%
 		max-width: 100%
+	&_active
+		transition: none
 
 	&__link
 		color: white
