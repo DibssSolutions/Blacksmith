@@ -1,0 +1,87 @@
+.cta
+	+helvetica
+	padding-top: 60px
+	padding-bottom: 80px
+
+	&__container
+
+	&__title
+
+	&__descr
+		margin-top: 20px
+		color: $text-dark-gray
+		font-weight: 700
+		line-height: 2.5
+		+md
+			line-height: 1.4
+
+	&__subtitle
+		margin-top: 14px
+
+	&__cta
+		margin-top: 24px
+		color: $purple
+		font-size: 32px
+		font-weight: 700
+
+	&__form
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+	&__input
+		font-size: 18px
+		margin-top: 7px
+		min-height: 64px
+		max-width: 494px
+		width: 100%
+		border: 1px solid #d8d8d8
+		border-radius: 5px
+		padding: 24px
+		&::placeholder
+			font-size: 14px
+			+helvetica
+			color: #6c6c6c
+		&:focus
+			border-color: $purple
+
+	&__textarea
+		resize: none
+
+	&__file-label
+		margin-top: 30px
+		max-width: 494px
+		width: 100%
+		cursor: pointer
+		display: flex
+		align-items: center
+		color: #353535
+		text-decoration: underline
+		&:before
+			flex-shrink: 0
+			content: ''
+			display: block
+			width: 30px
+			height: 38px
+			background: url("../img/input-file.svg") no-repeat center
+			margin-right: 20px
+		+hover
+			text-decoration: none
+			color: rgba(#353535, .7)
+
+	&__input-file
+		display: none
+
+	&__policy
+		margin-top: 20px
+		font-size: 14px
+		font-weight: 300
+		color: $text-dark-gray
+
+	&__link
+		color: $text-dark-gray
+		+hover
+			text-decoration: underline
+
+	&__button
+		margin-top: 12px
