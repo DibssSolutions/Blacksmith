@@ -1,10 +1,21 @@
 .process
+	overflow: hidden
 	padding: 23px 40px
 	+helvetica
 	width: 50%
 	max-width: calc(50% - 16px)
 	border-radius: 10px
 	margin-top: 30px
+	position: relative
+	&:before
+		transition: 300ms
+		content: ''
+		width: 100%
+		height: 0
+		position: absolute
+		top: 0
+		left: 0
+		background-color: $dark-purple
 	+sm
 		width: 100%
 		max-width: none
@@ -12,7 +23,8 @@
 	//Hover
 	+hover
 		color: $white
-		background-color: $dark-purple
+		&:before
+			height: 100%
 		.process__head
 			&:after
 				max-width: 100%
@@ -31,6 +43,7 @@
 		margin-bottom: 20px
 		padding-bottom: 13px
 		&:after
+			transition: 300ms
 			content: ''
 			position: absolute
 			width: 100%
@@ -44,6 +57,7 @@
 				max-width: 36px
 
 	&__count
+		transition: 300ms
 		position: relative
 		font-size: 50px
 		font-weight: 700
@@ -52,7 +66,10 @@
 			font-size: 32px
 
 	&__title
+		transition: 300ms
 		margin-left: 18px
 
-	&_descr
+	&__descr
+		transition: 300ms
+		position: relative
 		color: $text-gray
