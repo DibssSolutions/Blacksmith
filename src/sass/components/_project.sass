@@ -1,29 +1,43 @@
 .project
 	+helvetica
-	color: white
+	will-change: transform
+	transform: perspective(1000px) rotateX(0deg) rotateY(0deg)
+
 	width: 50%
 	max-width: calc(50% - 16px)
 	margin-top: 30px
 	border-radius: 10px
 	min-height: 328px
-	display: flex
-	flex-direction: column
-	padding: 17px 40px 47px
-	+md
-		padding-bottom: 27px
 	+sm
-		padding: 17px 22px 27px
 		width: 100%
 		max-width: 100%
 
+	&__link
+		color: white
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		padding: 17px 40px 47px
+		+md
+			padding-bottom: 27px
+		+sm
+			padding: 17px 22px 27px
+		+hover
+			.project__see
+				opacity: 1
+
 	&__title
+		pointer-events: none
 
 	&__logo
+		pointer-events: none
 		margin-top: auto
 
 	&__image
 
 	&__footer
+		pointer-events: none
 		margin-top: 12px
 		display: flex
 		align-items: baseline
@@ -32,10 +46,9 @@
 		font-size: 20px
 		font-weight: 300
 
-	&__link
+	&__see
+		transition: 300ms
 		margin-left: auto
 		color: white
 		text-decoration: underline
-		+hover
-			opacity: .7
-			text-decoration: none
+		opacity: 0
