@@ -1,4 +1,7 @@
 .main-hero
+	overflow: hidden
+	+helvetica
+	color: $white
 	position: relative
 	background: url("../img/hero-background.jpg") center no-repeat
 	background-size: cover
@@ -13,4 +16,44 @@
 		background-image: linear-gradient(42deg, rgba(#1f0240, 0.9) 0%, rgba(#5b3998, 0.9) 100%)
 
 	&__container
+		position: relative
 		min-height: 694px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+
+		&:after
+			content: ''
+			pointer-events: none
+			position: absolute
+			background: url("../img/iphone-mac.png") no-repeat 815px
+			top: 0
+			left: 0
+			width: 200%
+			height: 100%
+
+
+	&__title
+
+	&__descr
+		margin-top: 18px
+
+	&__table
+		max-width: 524px
+		margin-top: 24px
+
+	&__table-row
+
+	&__table-data
+		text-align: center
+		font-size: 32px
+		font-weight: 700
+
+
+	&__table-head
+		text-align: center
+		font-weight: 300
+
+	&__button
+		margin-top: 54px
