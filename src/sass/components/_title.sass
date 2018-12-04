@@ -3,6 +3,21 @@
 	font-size: 42px
 	font-weight: 700
 	color: $black
+	position: relative
 
 	&_white
 		color: $white
+
+	&_decorated
+		padding-bottom: 18px
+		&:after
+			content: ''
+			position: absolute
+			width: 54px
+			height: 8px
+			background-color: $black
+			left: 0
+			bottom: 0
+
+	&_sm
+		font-size: 22px
