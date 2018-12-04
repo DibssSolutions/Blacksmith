@@ -1,0 +1,77 @@
+.footer
+	padding: 40px 0
+	+helvetica
+	font-weight: 300
+	color: $text-dark-gray
+
+	&__container
+		display: flex
+		justify-content: space-between
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			height: 2px
+			top: -40px
+			left: 15px
+			right: 15px
+			background-color: #ebebeb
+			
+		+md
+			flex-wrap: wrap
+
+	&__block
+		+md
+			width: 50%
+		+sm
+			width: 100%
+			margin-bottom: 20px
+
+	&__block_logo
+		text-align: left
+
+	&__block_address
+		text-align: left
+		+md
+			text-align: right
+		+sm
+			text-align: left
+
+	&__block_contacts
+		text-align: right
+		+md
+			margin-top: 40px
+			text-align: left
+		+sm
+			margin-top: 0
+
+	&__logo
+
+	&__logo-image
+
+	&__feedback-block
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		.icon
+			margin-right: 9px
+		+md
+			justify-content: flex-start
+
+	&__text
+		+md
+			font-size: 14px
+
+	&__text_sm
+		font-size: 14px
+
+	&__text_bold
+		font-weight: 700
+
+	&__text_underline
+
+	&__link
+		display: block
+		color: $text-dark-gray
+		+hover
+			text-decoration: underline
