@@ -1,4 +1,5 @@
 .header
+	position: relative
 	+helvetica
 	background-color: $white
 	font-weight: 700
@@ -16,16 +17,25 @@
 
 	&__logo
 
+	&__menu
+		flex-grow: 1
+		display: flex
+		+md
+			border-bottom: 1px solid $gray
+			box-shadow: 0 6px 8px rgba(0,0,0,.5)
+			flex-direction: column
+			width: 100%
+			bottom: 0
+			left: 0
+			position: absolute
+			transform: translateY(100%) translateX(100%)
+			z-index: 1
+			background-color: $white
+
 	&__nav
 		margin-left: 60px
 		+md
-			margin-left: 20px
-		+sm
-			max-width: 480px
-			margin-top: 12px
 			margin-left: 0
-			width: 100%
-			order: 1
 
 	&__feedback
 		display: flex
@@ -33,18 +43,83 @@
 		margin-left: auto
 		min-width: 324px
 		+md
-			min-width: 280px
+			margin-left: 0
+			flex-direction: column
 		+sm
 			min-width: auto
 			display: flex
 			flex-direction: column
+
+	&__link-wrapper
+		+md
+			display: flex
+			justify-content: center
+			position: relative
+			padding: 12px 0
+			&:before
+				content: ''
+				position: absolute
+				height: 1px
+				top: 0
+				left: 15px
+				right: 15px
+				background-color: $gray
 
 	&__link
 		font-size: 15px
 		display: flex
 		align-items: center
 		color: black
+
 		.icon
 			margin-right: 9px
-		+sm
-			margin-left: 24px
+
+	&__toggle
+		cursor: pointer
+		display: none
+		align-items: center
+		margin-left: auto
+		width: 24px
+		height: 24px
+		+md
+			display: flex
+
+	&__toggle-icon
+		transition: background-color 300ms
+		position: relative
+		width: 100%
+		height: 2px
+		background-color: $black
+
+		&:before, &:after
+			transition-property: top, bottom, transform
+			transition-duration: 300ms
+			content: ''
+			position: absolute
+			width: 100%
+			height: 2px
+			left: 0
+			background-color: $black
+
+		&:before
+			top: -8px
+
+		&:after
+			bottom: -8px
+
+// Opened
+.header_opened
+
+	.header__menu
+		transition: transform 300ms linear
+		transform: translateY(100%) translateX(0)
+
+	.header__toggle-icon
+		background-color: transparent
+		&:before
+			top: 0
+			transform: rotate(45deg)
+		&:after
+			bottom: 0
+			transform: rotate(-45deg)
+

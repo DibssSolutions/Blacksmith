@@ -1,29 +1,41 @@
-<header class="header">
+<header class="header js-header">
   <div class="header__container container">
     <a href="#" class="header__logo">
       <img src="./img/logo.png" alt="Logo image" class="header__logo-image">
     </a>
 
-    <nav class="header__nav nav">
-      <ul class="nav__list">
-        {% for item in ['Главная', 'О Компании' , 'Услуги', 'Контанты'] %}
-          <li class="nav__item">
-            <a href="#" class="nav__link underline-link">{{ item }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-
-
-    <div class="header__feedback">
-      <a href="mailto:mail@blacksmithstudio.ru" class="header__link underline-link">
-        {{ mixins.icon('pen') }}
-        Написать нам
-      </a>
-      <a href="tel:+88007777777" class="header__link underline-link">
-        {{ mixins.icon('phone') }}
-        8-800-777-77-77
-      </a>
+    <div class="header__toggle js-toggle">
+      <div class="header__toggle-icon"></div>
     </div>
+
+    <div class="header__menu js-menu">
+
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          {% for item in ['Главная', 'О Компании' , 'Услуги', 'Контанты'] %}
+            <li class="nav__item">
+              <a href="#" class="nav__link underline-link">{{ item }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <div class="header__feedback">
+        <div class="header__link-wrapper">
+          <a href="mailto:mail@blacksmithstudio.ru" class="header__link underline-link">
+            {{ mixins.icon('pen') }}
+            Написать нам
+          </a>
+        </div>
+        <div class="header__link-wrapper">
+          <a href="tel:+88007777777" class="header__link underline-link">
+            {{ mixins.icon('phone') }}
+            8-800-777-77-77
+          </a>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </header>
