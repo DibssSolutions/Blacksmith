@@ -1,10 +1,15 @@
 .header
-	position: relative
+	position: fixed
+	z-index: 1
+	width: 100%
 	+helvetica
 	background-color: $white
 	font-weight: 700
 	+md
 		font-size: 16px
+
+	&_shadow
+		box-shadow: 0 3px 4px rgba(0,0,0,.5)
 
 	&__container
 		display: flex
