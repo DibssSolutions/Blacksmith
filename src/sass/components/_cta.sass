@@ -55,8 +55,6 @@
 		cursor: pointer
 		display: flex
 		align-items: center
-		color: #353535
-		text-decoration: underline
 		&:before
 			flex-shrink: 0
 			content: ''
@@ -69,6 +67,9 @@
 			text-decoration: none
 			color: rgba(#353535, .7)
 
+	&__file-text
+		color: #353535
+
 	&__input-file
 		display: none
 
@@ -80,8 +81,6 @@
 
 	&__link
 		color: $text-dark-gray
-		+hover
-			text-decoration: underline
 
 	&__button
 		margin-top: 12px
