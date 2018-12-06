@@ -30,6 +30,7 @@
 		align-items: flex-start
 
 	&__input
+		position: relative
 		font-size: 18px
 		margin-top: 7px
 		min-height: 64px
@@ -46,7 +47,21 @@
 			border-color: $purple
 
 	&__input_invalid
-	  border-color: red
+		border-color: red
+
+	&__input_invalid + &__validation-message
+			opacity: 1
+			max-height: 20px
+
+	&__validation-message
+		transition-property: opacity, max-height
+		transition-duration: 300ms
+		max-height: 0
+		opacity: 0
+		color: red
+		font-size: 12px
+		font-weight: 300
+
 
 	&__textarea
 		resize: none
