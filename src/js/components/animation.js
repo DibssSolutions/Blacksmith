@@ -25,7 +25,8 @@ function isScrolledIntoView(elem, yOffset = 0) {
 
   let elemTop = elem.offset().top;
   let elemBottom = elemTop + elem.height();
-  return (((elemBottom - yOffset) <= docViewBottom) && ((elemTop - yOffset) >= docViewTop));
+  // return (((elemBottom - yOffset) <= docViewBottom) && ((elemTop - yOffset) >= docViewTop));
+  return ((((elemTop + (elem.outerHeight()/2)) - yOffset) <= docViewBottom));
 }
 
 function initAnimation() {
