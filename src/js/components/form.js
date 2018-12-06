@@ -42,6 +42,7 @@ function mailIsValid() {
 }
 
 function runShakeInit(item) {
+  item.css('transition', 'none');
   item.animate({
     left: -8
   }, 50).animate({

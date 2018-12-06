@@ -35,6 +35,7 @@
 		align-items: flex-start
 
 	&__input
+		+animate
 		position: relative
 		font-size: 18px
 		margin-top: 7px
@@ -72,6 +73,7 @@
 		resize: none
 
 	&__file-label
+		+animate
 		margin-top: 30px
 		max-width: 494px
 		width: 100%
@@ -97,6 +99,7 @@
 		display: none
 
 	&__policy
+		+animate
 		margin-top: 20px
 		font-size: 14px
 		font-weight: 300
@@ -106,10 +109,12 @@
 		color: $text-dark-gray
 
 	&__button
+		+animate
 		margin-top: 12px
 
 	&__button-text
 		position: relative
 
 	&__animate
-		left: -100vw
+		opacity: 0
+		top: -100px

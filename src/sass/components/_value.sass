@@ -4,7 +4,7 @@
 	color: $black
 	background-color: #fafafa
 	&:before
-		transition: transform 300ms
+		transition: opacity 300ms linear
 		content: ''
 		position: absolute
 		width: calc((50% - 1242px/2) + 1242px * 0.4)
@@ -12,7 +12,7 @@
 		height: 100%
 		top: 0
 		right: 0
-		transform: scaleY(0)
+		opacity: 0
 	+r(1272)
 		&:before
 			width: 40%
@@ -26,24 +26,10 @@
 			top: auto
 			bottom: 0
 	+hover
-		background-color: #e6e6e6
 		&:before
-			transform: scaleY(1)
+			opacity: 1
 		.value__price
 			color: $white
-
-	&_animate
-
-	&__bg-animation
-		position: absolute
-		height: 100%
-		width: 100%
-		opacity: 0
-		right: 0
-		top: 0
-		z-index: 2
-		background: linear-gradient(135deg, #5a96fa 0%, #59097c 100%)
-
 
 	&__container
 		opacity: 1
@@ -54,9 +40,6 @@
 		padding: 15px 15px
 		+sm
 			flex-wrap: wrap
-
-	&__container_animate
-		opacity: 0
 
 	&__info
 		width: 60%

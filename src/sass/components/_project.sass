@@ -27,9 +27,6 @@
 	&_animate
 		.project__background
 			width: 0
-		.project__link
-			opacity: 0
-			top: 100px
 
 	&__link
 		top: 0
@@ -51,15 +48,18 @@
 				opacity: 1
 
 	&__title
+		+animate
 		pointer-events: none
 
 	&__logo
+		+animate
 		pointer-events: none
 		margin-top: auto
 
 	&__image
 
 	&__footer
+		+animate
 		pointer-events: none
 		margin-top: 12px
 		display: flex
@@ -75,3 +75,7 @@
 		color: white
 		text-decoration: underline
 		opacity: 0
+
+.js-project-anim
+	left: 100px
+	opacity: 0

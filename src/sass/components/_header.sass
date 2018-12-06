@@ -28,7 +28,6 @@
 		opacity: 0
 
 	&__menu
-		+animate
 		top: auto
 		flex-grow: 1
 		display: flex
@@ -68,6 +67,7 @@
 			flex-direction: column
 
 	&__link-wrapper
+		+animate
 		+md
 			display: flex
 			justify-content: center
@@ -92,7 +92,6 @@
 			margin-right: 9px
 
 	&__toggle
-		+animate
 		cursor: pointer
 		display: none
 		align-items: center
@@ -145,4 +144,8 @@
 		&:after
 			bottom: 0
 			transform: rotate(-45deg)
+
+.js-header-anim
+		opacity: 0
+		left: -100px
 

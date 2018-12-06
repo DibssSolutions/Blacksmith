@@ -35,19 +35,7 @@
 		.process__descr
 			color: #e6e6e6
 
-	&_animate
-
-	&__bg-animation
-		z-index: 10
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		height: 0
-		background-color: $purple
-
 	&__head
-		+animate
 		position: relative
 		display: flex
 		align-items: center
@@ -67,8 +55,6 @@
 			&:after
 				max-width: 36px
 
-	&__head_animate
-		opacity: 0
 
 	&__count
 		transition: 300ms
@@ -84,10 +70,7 @@
 		margin-left: 18px
 
 	&__descr
-		+animate
 		transition: 300ms
 		position: relative
 		color: $text-gray
 
-	&__descr_animate
-		opacity: 0
