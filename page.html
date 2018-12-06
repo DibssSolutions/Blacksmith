@@ -16,37 +16,37 @@
     <div class="out">
       <header class="header js-header">
         <div class="header__container container">
-          <a href="#" class="header__logo header__logo_animate">
+          <a href="#" class="header__logo js-header-anim">
             <img src="./img/logo.png" alt="Logo image" class="header__logo-image">
           </a>
-          <div class="header__toggle header__toggle_animate js-toggle">
+          <div class="header__toggle js-toggle">
             <div class="header__toggle-icon"></div>
           </div>
-          <div class="header__menu header__menu_animate js-menu">
+          <div class="header__menu js-menu">
             <nav class="header__nav nav">
               <ul class="nav__list">
-                <li class="nav__item">
+                <li class="nav__item js-header-anim">
                   <a href="#" class="nav__link underline-link">Главная</a>
                 </li>
-                <li class="nav__item">
+                <li class="nav__item js-header-anim">
                   <a href="#" class="nav__link underline-link">О Компании</a>
                 </li>
-                <li class="nav__item">
+                <li class="nav__item js-header-anim">
                   <a href="#" class="nav__link underline-link">Услуги</a>
                 </li>
-                <li class="nav__item">
+                <li class="nav__item js-header-anim">
                   <a href="#" class="nav__link underline-link">Контанты</a>
                 </li>
               </ul>
             </nav>
             <div class="header__feedback">
-              <div class="header__link-wrapper">
+              <div class="header__link-wrapper js-header-anim">
                 <a href="mailto:mail@blacksmithstudio.ru" class="header__link underline-link">
                   <svg class="icon icon-pen">
                     <use xlink:href="img/sprite.svg#icon-pen"></use>
                   </svg> Написать нам </a>
               </div>
-              <div class="header__link-wrapper">
+              <div class="header__link-wrapper js-header-anim">
                 <a href="tel:+88007777777" class="header__link underline-link">
                   <svg class="icon icon-phone">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
@@ -59,14 +59,14 @@
       <section class="main-hero">
         <div class="main-hero__container container">
           <div class="main-hero__image main-hero__image_animate"></div>
-          <div class="main-hero__content main-hero__content_animate">
-            <h2 class="main-hero__title title title_white">Создание сайтов под ключ</h2>
-            <p class="main-hero__descr"> Аналитика, прототипирование, UX-дизайн, качественный код <br /> Удобное управление и администрирование. </p>
-            <table class="main-hero__table">
+          <div class="main-hero__content">
+            <h2 class="main-hero__title title title_white js-main-hero-anim">Создание сайтов под ключ</h2>
+            <p class="main-hero__descr js-main-hero-anim"> Аналитика, прототипирование, UX-дизайн, качественный код <br /> Удобное управление и администрирование. </p>
+            <table class="main-hero__table js-main-hero-anim">
               <tr class="main-hero__table-row">
-                <td class="main-hero__table-data">267</td>
-                <td class="main-hero__table-data">10</td>
-                <td class="main-hero__table-data">98</td>
+                <td class="main-hero__table-data js-counter-animation">267</td>
+                <td class="main-hero__table-data js-counter-animation">10</td>
+                <td class="main-hero__table-data js-counter-animation">98</td>
               </tr>
               <tr class="main-hero__table-row">
                 <th class="main-hero__table-head">создано сайтов</th>
@@ -74,45 +74,41 @@
                 <th class="main-hero__table-head">интернет магазинов</th>
               </tr>
             </table>
-            <a href="#" class="main-hero__button button">Написать нам</a>
+            <a href="#" class="main-hero__button button js-main-hero-anim">Написать нам</a>
           </div>
         </div>
       </section>
       <section class="processes">
         <div class="processes__container container">
-          <h2 class="processes__title processes__title_animate title title_decorated">Процесс</h2>
+          <h2 class="processes__title processes__title_animate  title title_decorated">Процесс</h2>
           <ul class="processes__list">
-            <li class="processes__item process process_animate">
-              <div class="process__bg-animation"></div>
-              <div class="process__head process__head_animate">
+            <li class="processes__item process ">
+              <div class="process__head">
                 <p class="process__count">01</p>
                 <h3 class="process__title title title_sm">Аналитика, ТЗ и прототипирование</h3>
               </div>
-              <p class="process__descr process__descr_animate">Перед началом работ по созданию сайта, команда во главе с руководителем проекта проведет аналитическую работу. Изучит потребности вашей целевой аудитории и проанализирует конкурентов. Далее будет сформировано подробное техническое задание. При этом наша команда по кирпичикам соберет логичную структуру сайта. Итогом первого этапа станет подобный прототип проекта.</p>
+              <p class="process__descr">Перед началом работ по созданию сайта, команда во главе с руководителем проекта проведет аналитическую работу. Изучит потребности вашей целевой аудитории и проанализирует конкурентов. Далее будет сформировано подробное техническое задание. При этом наша команда по кирпичикам соберет логичную структуру сайта. Итогом первого этапа станет подобный прототип проекта.</p>
             </li>
-            <li class="processes__item process process_animate">
-              <div class="process__bg-animation"></div>
-              <div class="process__head process__head_animate">
+            <li class="processes__item process ">
+              <div class="process__head">
                 <p class="process__count">02</p>
                 <h3 class="process__title title title_sm">Дизайн </h3>
               </div>
-              <p class="process__descr process__descr_animate">Дизайнер по прототипу разработает web-страницы, которые сформируют положительное восприятие о компании или конечном продукте, сконцентрируют внимание посетителей на сильных сторонах и выстроят эффективную коммуникацию с каждым пользователем. Для наших проектов мы создаем UX/UI дизайн - это проектирование пользовательских интерфейсов в которых удобство использования так же важно как и внешний вид).</p>
+              <p class="process__descr">Дизайнер по прототипу разработает web-страницы, которые сформируют положительное восприятие о компании или конечном продукте, сконцентрируют внимание посетителей на сильных сторонах и выстроят эффективную коммуникацию с каждым пользователем. Для наших проектов мы создаем UX/UI дизайн - это проектирование пользовательских интерфейсов в которых удобство использования так же важно как и внешний вид).</p>
             </li>
-            <li class="processes__item process process_animate">
-              <div class="process__bg-animation"></div>
-              <div class="process__head process__head_animate">
+            <li class="processes__item process ">
+              <div class="process__head">
                 <p class="process__count">03</p>
                 <h3 class="process__title title title_sm">Верстка и программирование</h3>
               </div>
-              <p class="process__descr process__descr_animate">В процессе верстки мы оптимизируем сайт под различные разрешения экранов и браузеры (Chrome, Яндекс.Браузер, IE, Opera, FireFox и др.). Так же применяем грамотную адаптивную верстку для корректного отображения на всех типах мобильных устройств. Следуем веб-стандартам и рекомендациям разработчиков CMS/framework&quot;.</p>
+              <p class="process__descr">В процессе верстки мы оптимизируем сайт под различные разрешения экранов и браузеры (Chrome, Яндекс.Браузер, IE, Opera, FireFox и др.). Так же применяем грамотную адаптивную верстку для корректного отображения на всех типах мобильных устройств. Следуем веб-стандартам и рекомендациям разработчиков CMS/framework&quot;.</p>
             </li>
-            <li class="processes__item process process_animate">
-              <div class="process__bg-animation"></div>
-              <div class="process__head process__head_animate">
+            <li class="processes__item process ">
+              <div class="process__head">
                 <p class="process__count">04</p>
                 <h3 class="process__title title title_sm">Тестирование </h3>
               </div>
-              <p class="process__descr process__descr_animate">Когда завершены этапы, аналитики, дизайна и заканчивая backend’ом, к тестированию сайта приступает QA-специалист. В процессе он использует распространенные операционные системы Windows и MacOS, Android и iOs а также браузеры Google Chrome, Safari, Mozilla, Internet Explorer, FireFox, и Opera. Каждый проект тестируется без исключения, поэтому Вы получаете готовый продукт готовый к работе.</p>
+              <p class="process__descr">Когда завершены этапы, аналитики, дизайна и заканчивая backend’ом, к тестированию сайта приступает QA-специалист. В процессе он использует распространенные операционные системы Windows и MacOS, Android и iOs а также браузеры Google Chrome, Safari, Mozilla, Internet Explorer, FireFox, и Opera. Каждый проект тестируется без исключения, поэтому Вы получаете готовый продукт готовый к работе.</p>
             </li>
           </ul>
         </div>
@@ -124,11 +120,11 @@
             <li class="portfolio-list__item project project_animate js-perspective-anim">
               <div class="project__background" style="background-color: #4a8e21"></div>
               <a href="#" class="project__link">
-                <h3 class="project__title title title_white title_sm">Сайт для ресторана Bamboo.Bar</h3>
-                <div class="project__logo">
+                <h3 class="project__title title title_white title_sm js-project-anim">Сайт для ресторана Bamboo.Bar</h3>
+                <div class="project__logo js-project-anim">
                   <img src="./img/logo-bamboobar.png" alt="Project logo" class="project__image">
                 </div>
-                <div class="project__footer">
+                <div class="project__footer js-project-anim">
                   <p class="project__date">Site creation 2017 </p>
                   <span class="project__see">Смотреть</span>
                 </div>
@@ -137,11 +133,11 @@
             <li class="portfolio-list__item project project_animate js-perspective-anim">
               <div class="project__background" style="background-color: #1d599b"></div>
               <a href="#" class="project__link">
-                <h3 class="project__title title title_white title_sm">Интернет магазин сантехники ВашДом</h3>
-                <div class="project__logo">
+                <h3 class="project__title title title_white title_sm js-project-anim">Интернет магазин сантехники ВашДом</h3>
+                <div class="project__logo js-project-anim">
                   <img src="./img/logo-your-home.png" alt="Project logo" class="project__image">
                 </div>
-                <div class="project__footer">
+                <div class="project__footer js-project-anim">
                   <p class="project__date">Site creation 2017 </p>
                   <span class="project__see">Смотреть</span>
                 </div>
@@ -150,11 +146,11 @@
             <li class="portfolio-list__item project project_animate js-perspective-anim">
               <div class="project__background" style="background-color: #191925"></div>
               <a href="#" class="project__link">
-                <h3 class="project__title title title_white title_sm">Сайт для ресторана City-Voice</h3>
-                <div class="project__logo">
+                <h3 class="project__title title title_white title_sm js-project-anim">Сайт для ресторана City-Voice</h3>
+                <div class="project__logo js-project-anim">
                   <img src="./img/logo-city-voice.png" alt="Project logo" class="project__image">
                 </div>
-                <div class="project__footer">
+                <div class="project__footer js-project-anim">
                   <p class="project__date">Site creation 2018 </p>
                   <span class="project__see">Смотреть</span>
                 </div>
@@ -163,11 +159,11 @@
             <li class="portfolio-list__item project project_animate js-perspective-anim">
               <div class="project__background" style="background-color: #4242a6"></div>
               <a href="#" class="project__link">
-                <h3 class="project__title title title_white title_sm">Музыкальный центр MusicTownRecords</h3>
-                <div class="project__logo">
+                <h3 class="project__title title title_white title_sm js-project-anim">Музыкальный центр MusicTownRecords</h3>
+                <div class="project__logo js-project-anim">
                   <img src="./img/logo-musictown.png" alt="Project logo" class="project__image">
                 </div>
-                <div class="project__footer">
+                <div class="project__footer js-project-anim">
                   <p class="project__date">Site creation 2018 </p>
                   <span class="project__see">Смотреть</span>
                 </div>
@@ -184,9 +180,8 @@
           </div>
         </div>
         <ul class="estimation__list">
-          <li class="estimation__item value value_animate">
-            <div class="value__bg-animation"></div>
-            <div class="value__container value__container_animate container">
+          <li class="estimation__item value">
+            <div class="value__container container">
               <div class="value__info">
                 <h3 class="value__title title title_sm">Корпоративные сайты</h3>
                 <p class="value__descr">Любим и умеем делать сайты для бизнеса любого масштаба. Для решения самых смелых и амбициозных бизнес-задач.</p>
@@ -196,9 +191,8 @@
               </div>
             </div>
           </li>
-          <li class="estimation__item value value_animate">
-            <div class="value__bg-animation"></div>
-            <div class="value__container value__container_animate container">
+          <li class="estimation__item value">
+            <div class="value__container container">
               <div class="value__info">
                 <h3 class="value__title title title_sm">Интернет магазины</h3>
                 <p class="value__descr">Любим и умеем делать сайты для бизнеса любого масштаба. Для решения самых смелых и амбициозных бизнес-задач.</p>
@@ -208,9 +202,8 @@
               </div>
             </div>
           </li>
-          <li class="estimation__item value value_animate">
-            <div class="value__bg-animation"></div>
-            <div class="value__container value__container_animate container">
+          <li class="estimation__item value">
+            <div class="value__container container">
               <div class="value__info">
                 <h3 class="value__title title title_sm">Лендинги</h3>
                 <p class="value__descr">Раскажем о ваших услугах во всех краскахи обеспечим поток клиентов</p>
@@ -228,22 +221,22 @@
           <p class="cta__descr cta__animate">Одним клиентам нужен сайт, что бы выполнял минимальный набор необходимых функций, другие клиенты хотят видеть анимацию и креативный дизайн с кастомными решениями. Поэтому для каждого типа проектов цена рассчитывается индивидуально.</p>
           <p class="cta__subtitle title title_sm cta__animate">Хотите рассчитать стоимость своего сайта?</p>
           <p class="cta__cta cta__animate">Напишите нам!</p>
-          <form action="/" class="cta__form cta__animate">
-            <input id="name" type="text" class="cta__input" placeholder="Ваше имя" />
+          <form action="/" class="cta__form">
+            <input id="name" type="text" class="cta__input cta__animate" placeholder="Ваше имя" />
             <span class="cta__validation-message">Имя должно быть больше 4 символов</span>
-            <input id="phone" type="tel" class="cta__input" placeholder="Телефон" />
+            <input id="phone" type="tel" class="cta__input cta__animate" placeholder="Телефон" />
             <span class="cta__validation-message">Пожалуйста, введите правильный номер телефона</span>
-            <input id="mail" type="email" class="cta__input" placeholder="Электронная почта" />
+            <input id="mail" type="email" class="cta__input cta__animate" placeholder="Электронная почта" />
             <span class="cta__validation-message">Пожалуйста, введите правильный адрес</span>
-            <textarea name="about" id="about" rows="7" class=" cta__input cta__textarea" placeholder="Расскажите о вашем проекте"></textarea>
-            <label class="cta__file-label">
+            <textarea name="about" id="about" rows="7" class=" cta__input cta__textarea cta__animate" placeholder="Расскажите о вашем проекте"></textarea>
+            <label class="cta__file-label cta__animate">
               <input id="file" type="file" class="cta__input-file" />
               <span class="cta__file-text underline-link js-file-label">Прикрепить бриф или тех. задание</span>
             </label>
-            <p class="cta__policy"> Отправляя данные, я принимаю условия оферты и согласен с <br />
+            <p class="cta__policy cta__animate"> Отправляя данные, я принимаю условия оферты и согласен с <br />
               <a href="#" class="cta__link underline-link underline-link_gray"> Политикой конфиденциальности</a>
             </p>
-            <button id="submit" type="button" class="cta__button button button_purple button_uppercase js-form-submit"><span class="cta__button-text">Отправить</span></button>
+            <button id="submit" type="button" class="cta__button button button_purple button_uppercase js-form-submit cta__animate"><span class="cta__button-text">Отправить</span></button>
           </form>
         </div>
       </section>
