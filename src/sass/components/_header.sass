@@ -21,8 +21,15 @@
 			padding: 15px
 
 	&__logo
+		+animate
+
+	&__logo_animate
+		left: -300px
+		opacity: 0
 
 	&__menu
+		+animate
+		top: auto
 		flex-grow: 1
 		display: flex
 		+md
@@ -37,6 +44,10 @@
 			transform: translateY(100%) rotateX(90deg)
 			z-index: 1
 			background-color: $white
+
+	&__menu_animate
+		left: 100%
+		opacity: 0
 
 	&__nav
 		margin-left: 60px
@@ -81,6 +92,7 @@
 			margin-right: 9px
 
 	&__toggle
+		+animate
 		cursor: pointer
 		display: none
 		align-items: center
@@ -89,6 +101,11 @@
 		height: 24px
 		+md
 			display: flex
+
+	&__toggle_animate
+		left: 50px
+		opacity: 0
+
 
 	&__toggle-icon
 		transition: background-color 300ms

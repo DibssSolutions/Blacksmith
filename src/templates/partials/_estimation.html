@@ -1,6 +1,6 @@
 {% import 'data/estimation-data.html' as data %}
 <section class="estimation">
-  <div class="estimation__header">
+  <div class="estimation__header estimation__header_animate estimation__header_animane">
     <div class="estimation__container container">
       <h2 class="estimation__title title title_white title_decorated">Сколько стоит сайт?</h2>
       <p class="estimation__descr">Ответить однозначно, не можем, так как каждый проект расчитываеться индивидуально. Но
@@ -10,8 +10,9 @@
   </div>
   <ul class="estimation__list">
     {% for item in data.list %}
-      <li class="estimation__item value">
-        <div class="value__container container">
+      <li class="estimation__item value value_animate">
+        <div class="value__bg-animation"></div>
+        <div class="value__container value__container_animate container">
           <div class="value__info">
             <h3 class="value__title title title_sm">{{ item.title }}</h3>
             <p class="value__descr">{{ item.descr }}</p>

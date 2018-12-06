@@ -63,7 +63,6 @@ function isValidForm() {
   isValid = (mailIsValid() ? isValid : false);
 
 
-  console.log(isValid);
   return isValid;
 }
 

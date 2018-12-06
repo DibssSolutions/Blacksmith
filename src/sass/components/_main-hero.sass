@@ -25,15 +25,27 @@
 		align-items: flex-start
 		justify-content: center
 
-		&:after
-			content: ''
-			pointer-events: none
-			position: absolute
-			background: url("../img/iphone-mac.png") no-repeat 815px
-			top: 0
-			left: 0
-			width: 200%
-			height: 100%
+	&__image
+		+animate
+		content: ''
+		pointer-events: none
+		position: absolute
+		background: url("../img/iphone-mac.png") no-repeat 815px
+		top: 0
+		left: 0
+		width: 200%
+		height: 100%
+
+	&__image_animate
+		left: 100%
+
+	&__content
+		+animate
+
+	&__content_animate
+		opacity: 0
+		top: 500px
+
 
 
 	&__title

@@ -21,11 +21,16 @@
 			flex-wrap: wrap
 
 	&__block
+		+animate
 		+md
 			width: 50%
 		+sm
 			width: 100%
 			margin-bottom: 20px
+
+	&__block_animate
+		top: 300px
+		opacity: 0
 
 	&__block_logo
 		text-align: left
