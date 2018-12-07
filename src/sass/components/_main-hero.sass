@@ -24,13 +24,21 @@
 		align-items: flex-start
 		justify-content: center
 
+	&__content
+		display: flex
+		flex-direction: column
+		min-height: 310px
+		margin-top: -42px
+		+md
+			margin-top: 0
+
 	&__image
 		+animate
 		transition-duration: 1500ms
 		content: ''
 		pointer-events: none
 		position: absolute
-		background: url("../img/iphone-mac.png") no-repeat 815px
+		background: url("../img/iphone-mac.png") no-repeat 745px calc(50% + 24px)
 		top: 0
 		left: 0
 		width: 200%
@@ -46,18 +54,21 @@
 
 	&__descr
 		+animate
-		margin-top: 18px
+		margin-top: 24px
+		font-size: 15px
+		font-weight: 300
+		line-height: 2
 
 	&__table
+		margin-top: auto
 		+animate
 		max-width: 524px
-		margin-top: 24px
 
 	&__table-row
 
 	&__table-data
 		text-align: center
-		font-size: 32px
+		font-size: 46px
 		font-weight: 700
 		+sm
 			font-size: 24px

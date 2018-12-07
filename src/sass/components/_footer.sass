@@ -1,5 +1,5 @@
 .footer
-	padding: 40px 0
+	padding: 45px 0
 	+helvetica
 	font-weight: 300
 	color: $text-dark-gray
@@ -22,6 +22,7 @@
 
 	&__block
 		+animate
+		width: 33%
 		+md
 			width: 50%
 		+sm
@@ -36,10 +37,12 @@
 		text-align: left
 
 	&__block_address
+		padding-left: 30px
 		text-align: left
 		+md
 			text-align: right
 		+sm
+			padding-left: 0
 			text-align: left
 
 	&__block_contacts
@@ -53,6 +56,9 @@
 	&__logo
 
 	&__logo-image
+		width: 145px
+		height: 52px
+		margin-bottom: 12px
 
 	&__feedback-block
 		display: flex
@@ -64,6 +70,7 @@
 			justify-content: flex-start
 
 	&__text
+		margin-top: 6px
 		+md
 			font-size: 14px
 

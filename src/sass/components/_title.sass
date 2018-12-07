@@ -1,6 +1,7 @@
 .title
 	+helvetica
-	font-size: 42px
+	letter-spacing: -2px
+	font-size: 46px
 	font-weight: 700
 	color: $black
 	position: relative
@@ -8,14 +9,14 @@
 		font-size: 28px
 
 	&_decorated
-		padding-bottom: 18px
+		padding-bottom: 24px
 		&:after
 			content: ''
 			position: absolute
 			width: 54px
 			height: 8px
 			background-color: $black
-			left: 0
+			left: 2px
 			bottom: 0
 
 	&_white
@@ -24,4 +25,7 @@
 			background-color: $white
 
 	&_sm
-		font-size: 22px
+		font-size: 23px
+		letter-spacing: .25px
+		+sm
+			font-size: 20px
