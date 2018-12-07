@@ -128,7 +128,7 @@ function initAnimation() {
 
       setTimeout(() => {
         item.removeClass('cta__animate');
-      }, 100 * index);
+      }, 75 * index);
     });
   }
 
