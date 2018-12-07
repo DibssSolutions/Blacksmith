@@ -5,13 +5,12 @@ let heroImage = $('.main-hero__image');
 let heroItems = $('.js-main-hero-anim');
 let counterItems = $('.js-counter-animation');
 //Process
-let processesTitle = $('.processes__title');
-let processItems = $('.process');
+let processItems = $('.js-process-anim');
 //Projects
 let portfolioTitle = $('.portfolio-list__title');
 let projects = $('.project');
 //Estimation
-let estimateHead = $('.estimation__header');
+let valueItems = $('.js-value-anim');
 //cta
 let ctaItems = $('.cta__animate');
 //Footer
@@ -45,7 +44,7 @@ function initAnimation() {
 
       setTimeout(() => {
         item.removeClass('js-header-anim');
-      }, 150 * index);
+      }, 100 * index);
     });
   }
 
@@ -55,7 +54,7 @@ function initAnimation() {
       $(this).prop('Counter', 0).animate({
         Counter: $(this).attr('data-counter')
       }, {
-        duration: 2000,
+        duration: 1500,
         easing: 'swing',
         step: function(now) {
           $(this).text(Math.ceil(now));
@@ -71,50 +70,56 @@ function initAnimation() {
 
       setTimeout(() => {
         item.removeClass('js-main-hero-anim');
-      }, 175 * index);
+      }, 100 * index);
     }).promise().done(() => {
       setTimeout(() => {
         startBlockAnimation(headerItems, 'js-header-anim', triggerHeaderAnimation);
         startCounterAnimation();
-      }, (reverseSequence.length + 1) * 175);
+        heroImage.removeClass('main-hero__image_animate');
+      }, (reverseSequence.length + 1) * 100);
     });
-  }
-
-  if (isScrolledIntoView(heroImage) && heroImage.hasClass('main-hero__image_animate')) {
-    heroImage.removeClass('main-hero__image_animate');
   }
 
   startBlockAnimation(heroItems, 'js-main-hero-anim', triggerMainHeroAnimation);
 
   /** process */
-  if (isScrolledIntoView(processesTitle) && processesTitle.hasClass('processes__title_animate')) {
-    processesTitle.removeClass('processes__title_animate');
-  }
 
   function triggerProcessAnimation() {
+
     processItems.each(function(index) {
 
-      $(this).removeClass('process_animate');
-      $(this).find('.js-process-anim').each((function(index) {
-        let subItem = $(this);
-        setTimeout(() => {
-          subItem.removeClass('js-process-anim');
-        }, index * 250);
-      }));
+      let subItem = $(this);
+      setTimeout(() => {
+        subItem.removeClass('js-process-anim');
+      }, index * 150);
+
     });
   }
 
-  startBlockAnimation(processItems, 'process_animate', triggerProcessAnimation);
+  startBlockAnimation(processItems, 'js-process-anim', triggerProcessAnimation, 100);
 
   /** Projects */
-  if (isScrolledIntoView(portfolioTitle) && portfolioTitle.hasClass('portfolio-list__title_animate')) {
+  if (isScrolledIntoView(portfolioTitle, 100) && portfolioTitle.hasClass('portfolio-list__title_animate')) {
     portfolioTitle.removeClass('portfolio-list__title_animate');
   }
 
   /** Estimation */
-  if (isScrolledIntoView(estimateHead) && estimateHead.hasClass('estimation__header_animate')) {
-    estimateHead.removeClass('estimation__header_animate');
-  }
+
+  valueItems.each(function() {
+    if (isScrolledIntoView($(this), 100) && $(this).hasClass('js-value-anim')) {
+      $(this).removeClass('js-value-anim');
+    }
+  });
+  // function triggerValueAnimation() {
+  //   valueItems.each(function(index) {
+  //     let item = $(this);
+  //     setTimeout(() => {
+  //       item.removeClass('js-value-anim');
+  //     }, 300 * index);
+  //   });
+  // }
+  // startBlockAnimation(valueItems, 'js-value-anim', triggerValueAnimation, 100);
+
 
   /** Cta */
   function triggerCascadeCtaAnimation() {
@@ -123,7 +128,7 @@ function initAnimation() {
 
       setTimeout(() => {
         item.removeClass('cta__animate');
-      }, 150 * index);
+      }, 100 * index);
     });
   }
 

@@ -1,4 +1,5 @@
 .estimation
+	background-color: black
 	overflow: hidden
 	color: $white
 	+helvetica
@@ -6,23 +7,16 @@
 	&__container
 
 	&__header
+		+animate
+		transition-duration: 500ms
 		background-color: $black
 		padding: 62px 0 86px
 
-	&__header_animate
-		.estimation__title, .estimation__descr
-			opacity: 0
-			transform: translateX(100px)
-
-
-
 	&__title
-		+animate
 		&:after
 			transition: background-color 1000ms
 
 	&__descr
-		+animate
 		margin-top: 30px
 		max-width: 775px
 		font-size: 14px
@@ -32,6 +26,11 @@
 
 	&__item
 		position: relative
+
+.js-value-anim
+	opacity: 0
+	transform: translateY(100px)
+
 
 
 

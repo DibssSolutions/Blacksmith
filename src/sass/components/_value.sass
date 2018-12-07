@@ -42,8 +42,10 @@
 		background-color: #e6e6e6
 
 	&__container
+		+animate
+		transition-duration: 500ms
 		opacity: 1
-		transition: opacity 2000ms
+		z-index: 1
 		min-height: 250px
 		position: relative
 		display: flex
@@ -93,4 +95,3 @@
 		padding: 16px
 		font-size: 34px
 		font-weight: 700
-

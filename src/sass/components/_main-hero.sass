@@ -34,7 +34,7 @@
 
 	&__image
 		+animate
-		transition-duration: 1500ms
+		transition-duration: 500ms
 		content: ''
 		pointer-events: none
 		position: absolute
@@ -45,14 +45,16 @@
 		height: 100%
 
 	&__image_animate
-		left: 200px
+		left: 100px
 		opacity: 0
 
 
 	&__title
+		transition-duration: 200ms
 		+animate
 
 	&__descr
+		transition-duration: 200ms
 		+animate
 		margin-top: 24px
 		font-size: 15px
@@ -60,6 +62,7 @@
 		line-height: 2
 
 	&__table
+		transition-duration: 200ms
 		margin-top: auto
 		+animate
 		max-width: 524px
