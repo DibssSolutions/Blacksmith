@@ -8,6 +8,13 @@
 	+md
 		font-size: 16px
 
+	.js-header-anim
+		opacity: 0
+		transform: translateX(-20%)
+
+	.js-header-anim_logo
+		transform: translateX(0)
+
 	&_shadow
 		box-shadow: 0 3px 4px rgba(0,0,0,.5)
 
@@ -22,10 +29,6 @@
 
 	&__logo
 		+animate
-
-	&__logo_animate
-		left: -300px
-		opacity: 0
 
 	&__menu
 		top: auto
@@ -68,6 +71,7 @@
 
 	&__link-wrapper
 		+animate
+		transition-duration: 350ms
 		+md
 			display: flex
 			justify-content: center
@@ -92,6 +96,7 @@
 			margin-right: 9px
 
 	&__toggle
+		transition-duration: 350ms
 		cursor: pointer
 		display: none
 		align-items: center
@@ -144,8 +149,3 @@
 		&:after
 			bottom: 0
 			transform: rotate(-45deg)
-
-.js-header-anim
-		opacity: 0
-		left: -100px
-

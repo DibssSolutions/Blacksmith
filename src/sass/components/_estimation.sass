@@ -5,26 +5,24 @@
 	&__container
 
 	&__header
-		+animate
-		transition-property: background-color, color
 		background-color: $black
 		padding: 70px 0
 
 	&__header_animate
-		background-color: $white
-		color: $black
+		.estimation__title, .estimation__descr
+			opacity: 0
+			transform: translateX(100px)
 
-		.estimation__title
-			color: $black
-			&:after
-				background-color: $black
+
 
 	&__title
-		transition: color 1000ms
+		+animate
 		&:after
 			transition: background-color 1000ms
 
 	&__descr
+		+animate
+		margin-top: 16px
 		max-width: 775px
 		font-size: 14px
 		line-height: 1.85

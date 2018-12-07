@@ -6,6 +6,7 @@ let heroItems = $('.js-main-hero-anim');
 let counterItems = $('.js-counter-animation');
 //Process
 let processesTitle = $('.processes__title');
+let processItems = $('.process');
 //Projects
 let portfolioTitle = $('.portfolio-list__title');
 let projects = $('.project');
@@ -23,35 +24,38 @@ function isScrolledIntoView(elem, yOffset = 0) {
   let elemTop = elem.offset().top;
   // let elemBottom = elemTop + elem.height();
   // return (((elemBottom - yOffset) <= docViewBottom) && ((elemTop - yOffset) >= docViewTop));
-  return ((((elemTop + (elem.outerHeight()/2)) - yOffset) <= docViewBottom));
+  return ((((elemTop + (elem.outerHeight() / 2)) - yOffset) <= docViewBottom));
+}
+
+function startBlockAnimation(items, className, func, yOffset = 0) {
+  items.each(function(index) {
+    if (isScrolledIntoView($(this), yOffset) && $(this).hasClass(className)) {
+      func();
+      return false;
+    }
+  });
 }
 
 function initAnimation() {
+
   /** header */
-  function initHeaderAnimation() {
+  function triggerHeaderAnimation() {
     headerItems.each(function(index) {
       let item = $(this);
 
       setTimeout(() => {
         item.removeClass('js-header-anim');
-      }, 100 * index);
+      }, 150 * index);
     });
   }
 
-  headerItems.each(function(index) {
-    if (isScrolledIntoView($(this)) && $(this).hasClass('js-header-anim')) {
-      initHeaderAnimation();
-      return false;
-    }
-  });
-
   /** hero */
-  function initCounterAnimation() {
+  function startCounterAnimation() {
     counterItems.each(function() {
-      $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
+      $(this).prop('Counter', 0).animate({
+        Counter: $(this).attr('data-counter')
       }, {
-        duration: 1500,
+        duration: 2000,
         easing: 'swing',
         step: function(now) {
           $(this).text(Math.ceil(now));
@@ -60,65 +64,53 @@ function initAnimation() {
     });
   }
 
-  if (isScrolledIntoView(heroImage) && heroImage.hasClass('main-hero__image_animate')) {
-    heroImage.removeClass('main-hero__image_animate');
-  }
-
-  function initMainHeroAnimation() {
-    heroItems.each(function(index) {
+  function triggerMainHeroAnimation() {
+    let reverseSequence = $(heroItems.get().reverse());
+    reverseSequence.each(function(index) {
       let item = $(this);
 
       setTimeout(() => {
         item.removeClass('js-main-hero-anim');
-        if(item.hasClass('main-hero__table')) {
-          initCounterAnimation();
-        }
-      }, 100 * index);
+      }, 175 * index);
+    }).promise().done(() => {
+      setTimeout(() => {
+        startBlockAnimation(headerItems, 'js-header-anim', triggerHeaderAnimation);
+        startCounterAnimation();
+      }, (reverseSequence.length + 1) * 175);
     });
   }
 
-  heroItems.each(function(index) {
-    if (isScrolledIntoView($(this)) && $(this).hasClass('js-main-hero-anim')) {
-      initMainHeroAnimation();
-      return false;
-    }
-  });
+  if (isScrolledIntoView(heroImage) && heroImage.hasClass('main-hero__image_animate')) {
+    heroImage.removeClass('main-hero__image_animate');
+  }
 
-
+  startBlockAnimation(heroItems, 'js-main-hero-anim', triggerMainHeroAnimation);
 
   /** process */
   if (isScrolledIntoView(processesTitle) && processesTitle.hasClass('processes__title_animate')) {
     processesTitle.removeClass('processes__title_animate');
   }
 
+  function triggerProcessAnimation() {
+    processItems.each(function(index) {
+
+      $(this).removeClass('process_animate');
+      $(this).find('.js-process-anim').each((function(index) {
+        let subItem = $(this);
+        setTimeout(() => {
+          subItem.removeClass('js-process-anim');
+        }, index * 250);
+      }));
+    });
+  }
+
+  console.log(processItems);
+  startBlockAnimation(processItems, 'process_animate', triggerProcessAnimation);
+
   /** Projects */
   if (isScrolledIntoView(portfolioTitle) && portfolioTitle.hasClass('portfolio-list__title_animate')) {
     portfolioTitle.removeClass('portfolio-list__title_animate');
   }
-
-  function initProjectsAnim() {
-    projects.each(function(index) {
-      let item = $(this);
-
-      setTimeout(() => {
-        item.removeClass('project_animate');
-        setTimeout(() => {
-          item.find('.js-project-anim').each(function() {
-            $(this).removeClass('js-project-anim');
-          });
-        }, 750);
-      }, 200 * index);
-    });
-  }
-
-  projects.each(function() {
-    let item = $(this);
-
-    if (isScrolledIntoView(item) && item.hasClass('project_animate')) {
-      initProjectsAnim();
-      return false;
-    }
-  });
 
   /** Estimation */
   if (isScrolledIntoView(estimateHead) && estimateHead.hasClass('estimation__header_animate')) {
@@ -126,28 +118,23 @@ function initAnimation() {
   }
 
   /** Cta */
-  function initCascadeCtaAnimation() {
+  function triggerCascadeCtaAnimation() {
     ctaItems.each(function(index) {
       let item = $(this);
 
       setTimeout(() => {
         item.removeClass('cta__animate');
-      }, 100 * index);
+      }, 150 * index);
     });
   }
 
+  startBlockAnimation(ctaItems, 'cta__animate', triggerCascadeCtaAnimation, -100);
 
-  ctaItems.each(function(index) {
-    if (isScrolledIntoView($(this)) && $(this).hasClass('cta__animate')) {
-      initCascadeCtaAnimation();
-      return false;
-    }
-  });
   /** Footer */
   footerBlocks.each(function() {
     let item = $(this);
 
-    if (isScrolledIntoView(item,300) && item.hasClass('footer__block_animate')) {
+    if (isScrolledIntoView(item, 300) && item.hasClass('footer__block_animate')) {
       item.removeClass('footer__block_animate');
     }
   });

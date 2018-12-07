@@ -27,6 +27,7 @@
 
 	&__image
 		+animate
+		transition-duration: 1500ms
 		content: ''
 		pointer-events: none
 		position: absolute
@@ -70,9 +71,10 @@
 
 	&__button
 		+animate
-		transition: top 1000ms, left 1000ms, opacity 1000ms, background-color 300ms, border 300ms
+		transition: transform 300ms, opacity 1000ms, background-color 300ms, border 300ms
 		margin-top: 54px
 
 .js-main-hero-anim
-	top: 100px
+	transition-duration: 300ms
+	transform: translateY(50px)
 	opacity: 0

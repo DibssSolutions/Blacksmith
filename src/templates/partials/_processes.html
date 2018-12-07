@@ -1,15 +1,15 @@
 {% import 'data/processes-data.html' as data %}
 <section class="processes">
   <div class="processes__container container">
-    <h2 class="processes__title processes__title_animate  title title_decorated">Процесс</h2>
+    <h2 class="processes__title processes__title_animate title title_decorated">Процесс</h2>
     <ul class="processes__list">
       {% for item in  data.list %}
-        <li class="processes__item process ">
-          <div class="process__head">
+        <li class="processes__item process process_animate">
+          <div class="process__head js-process-anim">
             <p class="process__count">0{{ loop.index }}</p>
             <h3 class="process__title title title_sm">{{ item.title }}</h3>
           </div>
-          <p class="process__descr">{{ item.descr }}</p>
+          <p class="process__descr js-process-anim">{{ item.descr }}</p>
         </li>
       {% endfor %}
     </ul>
