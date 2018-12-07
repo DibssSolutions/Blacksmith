@@ -1,7 +1,7 @@
 .nav
 
 	&__list
-		min-width: 410px
+		min-width: 468px
 		display: flex
 		justify-content: space-between
 		+md
@@ -29,7 +29,15 @@
 				background-color: $gray
 
 	&__link
-		color: black
-		+hover
+		font-weight: 400
+		border-bottom: 1px solid transparent
+		transition: border 300ms
+		color: $white
+		&:hover
+			border-bottom: 1px solid $white
+		+md
+			color: $black
+			+hover
+				border-bottom: 1px solid $black
 		+sm
 			letter-spacing: -0.4px

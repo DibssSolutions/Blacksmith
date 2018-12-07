@@ -1,11 +1,15 @@
 .header
+	transition: 500ms
 	position: fixed
 	z-index: 5
 	width: 100%
+	padding-top: 32px
+	padding-bottom: 37px
 	+helvetica
-	background-color: $white
+	background-color: transparent
 	font-weight: 700
 	+md
+		background-color: $white
 		font-size: 16px
 
 	.js-header-anim
@@ -15,8 +19,23 @@
 	.js-header-anim_logo
 		transform: translateX(0)
 
-	&_shadow
+	&_scrolled
+		padding-top: 0
+		padding-bottom: 0
+		background-color: $white
 		box-shadow: 0 3px 4px rgba(0,0,0,.5)
+		.header__logo
+			.header__logo-image
+				background: url("../img/logo.png") no-repeat center
+				background-size: cover
+		.header__link
+			color: $black
+			+hover
+				border-bottom: 1px solid $black
+		.nav__link
+			color: $black
+			+hover
+				border-bottom: 1px solid $black
 
 	&__container
 		display: flex
@@ -29,8 +48,18 @@
 
 	&__logo
 		+animate
+		.header__logo-image
+			width: 145px
+			height: 52px
+			background: url("../img/logo-white.png") no-repeat center
+			background-size: cover
+		+md
+			.header__logo-image
+				background: url("../img/logo.png") no-repeat center
+				background-size: cover
 
 	&__menu
+		margin-top: 8px
 		top: auto
 		flex-grow: 1
 		display: flex
@@ -52,7 +81,7 @@
 		opacity: 0
 
 	&__nav
-		margin-left: 60px
+		margin-left: 92px
 		+md
 			margin-left: 0
 
@@ -87,13 +116,20 @@
 				background-color: $gray
 
 	&__link
+		transition: border 300ms
 		font-size: 15px
 		display: flex
 		align-items: center
-		color: black
-
+		color: $white
+		border-bottom: 1px solid transparent
+		+hover
+			border-bottom: 1px solid $white
 		.icon
 			margin-right: 9px
+		+md
+			color: $black
+			+hover
+				border-bottom: 1px solid $black
 
 	&__toggle
 		transition-duration: 350ms

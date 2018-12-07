@@ -1,7 +1,8 @@
 <header class="header js-header">
   <div class="header__container container">
     <a href="#" class="header__logo js-header-anim js-header-anim_logo">
-      <img src="./img/logo.png" alt="Logo image" class="header__logo-image">
+      <div class="header__logo-image"></div>
+    </a>
     </a>
 
     <div class="header__toggle js-toggle">
@@ -14,7 +15,7 @@
         <ul class="nav__list">
           {% for item in ['Главная', 'О Компании' , 'Услуги', 'Контанты'] %}
             <li class="nav__item js-header-anim">
-              <a href="#" class="nav__link underline-link">{{ item }}</a>
+              <a href="#" class="nav__link">{{ item }}</a>
             </li>
           {% endfor %}
         </ul>
@@ -22,7 +23,7 @@
 
       <div class="header__feedback">
         <div class="header__link-wrapper js-header-anim">
-          <a href="tel:+88007777777" class="header__link underline-link">
+          <a href="tel:+88007777777" class="header__link">
             {{ mixins.icon('phone') }}
             8-800-777-77-77
           </a>

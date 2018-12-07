@@ -17,7 +17,7 @@ $(window).ready(() => {
   });
 
   if($(window).scrollTop() > 0) {
-    header.addClass('header_shadow');
+    header.addClass('header_scrolled');
   }
 
   if ($(window).outerWidth() < 1023) {
@@ -38,9 +38,9 @@ $(window).ready(() => {
 
   $(window).scroll(() => {
     if($(window).scrollTop() > 0) {
-      header.addClass('header_shadow');
+      header.addClass('header_scrolled');
     }else{
-      header.removeClass('header_shadow');
+      header.removeClass('header_scrolled');
     }
   });
 });

@@ -104,7 +104,6 @@ function initAnimation() {
     });
   }
 
-  console.log(processItems);
   startBlockAnimation(processItems, 'process_animate', triggerProcessAnimation);
 
   /** Projects */
