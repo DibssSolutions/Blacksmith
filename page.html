@@ -16,7 +16,7 @@
     <div class="out">
       <header class="header js-header">
         <div class="header__container container">
-          <a href="#" class="header__logo js-header-anim">
+          <a href="#" class="header__logo js-header-anim js-header-anim_logo">
             <img src="./img/logo.png" alt="Logo image" class="header__logo-image">
           </a>
           <div class="header__toggle js-toggle">
@@ -64,9 +64,9 @@
             <p class="main-hero__descr js-main-hero-anim"> Аналитика, прототипирование, UX-дизайн, качественный код <br /> Удобное управление и администрирование. </p>
             <table class="main-hero__table js-main-hero-anim">
               <tr class="main-hero__table-row">
-                <td class="main-hero__table-data js-counter-animation">267</td>
-                <td class="main-hero__table-data js-counter-animation">10</td>
-                <td class="main-hero__table-data js-counter-animation">98</td>
+                <td class="main-hero__table-data js-counter-animation" data-counter="267">0</td>
+                <td class="main-hero__table-data js-counter-animation" data-counter="10">0</td>
+                <td class="main-hero__table-data js-counter-animation" data-counter="98">0</td>
               </tr>
               <tr class="main-hero__table-row">
                 <th class="main-hero__table-head">создано сайтов</th>
@@ -80,35 +80,35 @@
       </section>
       <section class="processes">
         <div class="processes__container container">
-          <h2 class="processes__title processes__title_animate  title title_decorated">Процесс</h2>
+          <h2 class="processes__title processes__title_animate title title_decorated">Процесс</h2>
           <ul class="processes__list">
-            <li class="processes__item process ">
-              <div class="process__head">
+            <li class="processes__item process process_animate">
+              <div class="process__head js-process-anim">
                 <p class="process__count">01</p>
                 <h3 class="process__title title title_sm">Аналитика, ТЗ и прототипирование</h3>
               </div>
-              <p class="process__descr">Перед началом работ по созданию сайта, команда во главе с руководителем проекта проведет аналитическую работу. Изучит потребности вашей целевой аудитории и проанализирует конкурентов. Далее будет сформировано подробное техническое задание. При этом наша команда по кирпичикам соберет логичную структуру сайта. Итогом первого этапа станет подобный прототип проекта.</p>
+              <p class="process__descr js-process-anim">Перед началом работ по созданию сайта, команда во главе с руководителем проекта проведет аналитическую работу. Изучит потребности вашей целевой аудитории и проанализирует конкурентов. Далее будет сформировано подробное техническое задание. При этом наша команда по кирпичикам соберет логичную структуру сайта. Итогом первого этапа станет подобный прототип проекта.</p>
             </li>
-            <li class="processes__item process ">
-              <div class="process__head">
+            <li class="processes__item process process_animate">
+              <div class="process__head js-process-anim">
                 <p class="process__count">02</p>
                 <h3 class="process__title title title_sm">Дизайн </h3>
               </div>
-              <p class="process__descr">Дизайнер по прототипу разработает web-страницы, которые сформируют положительное восприятие о компании или конечном продукте, сконцентрируют внимание посетителей на сильных сторонах и выстроят эффективную коммуникацию с каждым пользователем. Для наших проектов мы создаем UX/UI дизайн - это проектирование пользовательских интерфейсов в которых удобство использования так же важно как и внешний вид).</p>
+              <p class="process__descr js-process-anim">Дизайнер по прототипу разработает web-страницы, которые сформируют положительное восприятие о компании или конечном продукте, сконцентрируют внимание посетителей на сильных сторонах и выстроят эффективную коммуникацию с каждым пользователем. Для наших проектов мы создаем UX/UI дизайн - это проектирование пользовательских интерфейсов в которых удобство использования так же важно как и внешний вид).</p>
             </li>
-            <li class="processes__item process ">
-              <div class="process__head">
+            <li class="processes__item process process_animate">
+              <div class="process__head js-process-anim">
                 <p class="process__count">03</p>
                 <h3 class="process__title title title_sm">Верстка и программирование</h3>
               </div>
-              <p class="process__descr">В процессе верстки мы оптимизируем сайт под различные разрешения экранов и браузеры (Chrome, Яндекс.Браузер, IE, Opera, FireFox и др.). Так же применяем грамотную адаптивную верстку для корректного отображения на всех типах мобильных устройств. Следуем веб-стандартам и рекомендациям разработчиков CMS/framework&quot;.</p>
+              <p class="process__descr js-process-anim">В процессе верстки мы оптимизируем сайт под различные разрешения экранов и браузеры (Chrome, Яндекс.Браузер, IE, Opera, FireFox и др.). Так же применяем грамотную адаптивную верстку для корректного отображения на всех типах мобильных устройств. Следуем веб-стандартам и рекомендациям разработчиков CMS/framework&quot;.</p>
             </li>
-            <li class="processes__item process ">
-              <div class="process__head">
+            <li class="processes__item process process_animate">
+              <div class="process__head js-process-anim">
                 <p class="process__count">04</p>
                 <h3 class="process__title title title_sm">Тестирование </h3>
               </div>
-              <p class="process__descr">Когда завершены этапы, аналитики, дизайна и заканчивая backend’ом, к тестированию сайта приступает QA-специалист. В процессе он использует распространенные операционные системы Windows и MacOS, Android и iOs а также браузеры Google Chrome, Safari, Mozilla, Internet Explorer, FireFox, и Opera. Каждый проект тестируется без исключения, поэтому Вы получаете готовый продукт готовый к работе.</p>
+              <p class="process__descr js-process-anim">Когда завершены этапы, аналитики, дизайна и заканчивая backend’ом, к тестированию сайта приступает QA-специалист. В процессе он использует распространенные операционные системы Windows и MacOS, Android и iOs а также браузеры Google Chrome, Safari, Mozilla, Internet Explorer, FireFox, и Opera. Каждый проект тестируется без исключения, поэтому Вы получаете готовый продукт готовый к работе.</p>
             </li>
           </ul>
         </div>
@@ -117,53 +117,53 @@
         <div class="portfolio-list__container container">
           <h2 class="portfolio-list__title portfolio-list__title_animate title title_decorated">Наши проекты</h2>
           <ul class="portfolio-list__list">
-            <li class="portfolio-list__item project project_animate js-perspective-anim">
+            <li class="portfolio-list__item project js-perspective-anim">
               <div class="project__background" style="background-color: #4a8e21"></div>
               <a href="#" class="project__link">
-                <h3 class="project__title title title_white title_sm js-project-anim">Сайт для ресторана Bamboo.Bar</h3>
-                <div class="project__logo js-project-anim">
+                <h3 class="project__title title title_white title_sm">Сайт для ресторана Bamboo.Bar</h3>
+                <div class="project__logo">
                   <img src="./img/logo-bamboobar.png" alt="Project logo" class="project__image">
                 </div>
-                <div class="project__footer js-project-anim">
+                <div class="project__footer">
                   <p class="project__date">Site creation 2017 </p>
                   <span class="project__see">Смотреть</span>
                 </div>
               </a>
             </li>
-            <li class="portfolio-list__item project project_animate js-perspective-anim">
+            <li class="portfolio-list__item project js-perspective-anim">
               <div class="project__background" style="background-color: #1d599b"></div>
               <a href="#" class="project__link">
-                <h3 class="project__title title title_white title_sm js-project-anim">Интернет магазин сантехники ВашДом</h3>
-                <div class="project__logo js-project-anim">
+                <h3 class="project__title title title_white title_sm">Интернет магазин сантехники ВашДом</h3>
+                <div class="project__logo">
                   <img src="./img/logo-your-home.png" alt="Project logo" class="project__image">
                 </div>
-                <div class="project__footer js-project-anim">
+                <div class="project__footer">
                   <p class="project__date">Site creation 2017 </p>
                   <span class="project__see">Смотреть</span>
                 </div>
               </a>
             </li>
-            <li class="portfolio-list__item project project_animate js-perspective-anim">
+            <li class="portfolio-list__item project js-perspective-anim">
               <div class="project__background" style="background-color: #191925"></div>
               <a href="#" class="project__link">
-                <h3 class="project__title title title_white title_sm js-project-anim">Сайт для ресторана City-Voice</h3>
-                <div class="project__logo js-project-anim">
+                <h3 class="project__title title title_white title_sm">Сайт для ресторана City-Voice</h3>
+                <div class="project__logo">
                   <img src="./img/logo-city-voice.png" alt="Project logo" class="project__image">
                 </div>
-                <div class="project__footer js-project-anim">
+                <div class="project__footer">
                   <p class="project__date">Site creation 2018 </p>
                   <span class="project__see">Смотреть</span>
                 </div>
               </a>
             </li>
-            <li class="portfolio-list__item project project_animate js-perspective-anim">
+            <li class="portfolio-list__item project js-perspective-anim">
               <div class="project__background" style="background-color: #4242a6"></div>
               <a href="#" class="project__link">
-                <h3 class="project__title title title_white title_sm js-project-anim">Музыкальный центр MusicTownRecords</h3>
-                <div class="project__logo js-project-anim">
+                <h3 class="project__title title title_white title_sm">Музыкальный центр MusicTownRecords</h3>
+                <div class="project__logo">
                   <img src="./img/logo-musictown.png" alt="Project logo" class="project__image">
                 </div>
-                <div class="project__footer js-project-anim">
+                <div class="project__footer">
                   <p class="project__date">Site creation 2018 </p>
                   <span class="project__see">Смотреть</span>
                 </div>
