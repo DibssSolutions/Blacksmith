@@ -9,7 +9,7 @@
             <p class="process__count">0{{ loop.index }}</p>
             <h3 class="process__title title title_sm">{{ item.title }}</h3>
           </div>
-          <p class="process__descr js-process-anim">{{ item.descr }}</p>
+          <p class="process__descr js-process-anim">{{ item.descr | safe }}</p>
         </li>
       {% endfor %}
     </ul>
