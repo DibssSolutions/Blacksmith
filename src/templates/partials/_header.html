@@ -13,9 +13,25 @@
 
       <nav class="header__nav nav">
         <ul class="nav__list">
-          {% for item in ['Главная', 'О Компании' , 'Услуги', 'Контанты'] %}
+          {% for item in [
+            {
+            title: 'Процесс',
+            id: 'process'
+            },
+            {
+              title: 'Проекты',
+              id: 'projects'
+            },
+            {
+              title: 'Стоимость',
+              id: 'estimation'
+            },
+            {
+              title: 'Связаться',
+              id: 'cta'
+            }] %}
             <li class="nav__item js-header-anim">
-              <a href="#" class="nav__link">{{ item }}</a>
+              <a href="#{{item.id}}" class="nav__link js-header-link">{{ item.title }}</a>
             </li>
           {% endfor %}
         </ul>

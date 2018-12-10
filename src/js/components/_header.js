@@ -1,6 +1,18 @@
+import {SCROLL_TO} from '../utils';
 var header = $('.js-header');
 var toggle = $('.js-toggle');
 var menu = $('.js-menu');
+var links = $('.js-header-link');
+
+function getScrollValue(toScrollItem) {
+  let offsetString = toScrollItem.css('transform');
+  let yOffset = (offsetString === 'none') ?
+    0 :
+    +offsetString.slice(6,offsetString.length - 1).split(',')[5];
+  let position = toScrollItem.offset().top;
+  let headerHeight = 65;
+  return position - yOffset - headerHeight;
+}
 
 $(window).ready(() => {
 
@@ -46,10 +58,21 @@ $(window).ready(() => {
 
   $(window).click(function(event) {
     let target = $(event.target);
-    if(!target.parents('.js-header').length) {
+    if (!target.parents('.js-header').length) {
       header.removeClass('header_opened');
     }
   });
+
+  links.each(function() {
+
+    $(this).click((event) => {
+      event.preventDefault();
+      let item = $(this);
+      let toScrollItem = $(item.attr('href'));
+      SCROLL_TO(getScrollValue(toScrollItem));
+    });
+  });
+
 });
 
 
