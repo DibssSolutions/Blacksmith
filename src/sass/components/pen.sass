@@ -1,31 +1,48 @@
 .pen
-	transition: transform 150ms
-	cursor: pointer
 	position: fixed
-	background-color: rgba(#424242,.42)
-	width: 62px
-	height: 62px
-	bottom: 24px
-	right: 24px
-	display: flex
-	justify-content: center
-	align-items: center
-	border-radius: 50%
-	+hover
-		transform: scale(1.05)
-	&:active
-		opacity: .85
-	+sm
-		width: 36px
-		height: 36px
+
+	&__button
+		transition: transform 150ms
+		cursor: pointer
+		position: fixed
+		background-color: rgba(#424242, .42)
+		width: 62px
+		height: 62px
+		bottom: 24px
+		right: 24px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		+hover
+			transform: scale(1.05)
+
+		&:active
+			opacity: .85
+
+		+sm
+			width: 36px
+			height: 36px
 
 	&__image
 		display: flex
 		justify-content: center
 		align-items: center
+
 		.icon
 			font-size: 25px
 			fill: $white
+
 		+sm
 			.icon
 				font-size: 20px
+
+	&__content
+		position: fixed
+		bottom: 24px
+		right: 24px
+		width: 500px
+		height: 500px
+		border-radius: 10px
+		background-color: $white
+		border: 1px solid $black
