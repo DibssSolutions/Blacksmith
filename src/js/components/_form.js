@@ -50,7 +50,10 @@ function runShakeInit(item) {
     left: 3
   }, 50).animate({
     left: 0
-  }, 50);
+  }, 50).promise()
+    .done(() => {
+      item.css('transition', '');
+    });
 }
 
 function isValidForm(container) {

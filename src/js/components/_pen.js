@@ -20,7 +20,7 @@ $(window).ready(() => {
     }, 400);
     setTimeout(() => {
       penContent.addClass('pen__content_opened');
-    }, 1000);
+    }, 400);
   });
 
 
