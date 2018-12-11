@@ -8,8 +8,8 @@
           <div class="project__background" style="background-color: {{ item.color }}"></div>
           <a href="#" class="project__link">
             <h3 class="project__title title title_white title_sm">{{ item.title }}</h3>
-            <div class="project__logo">
-              <img src="./img/{{ item.logo }}" alt="Project logo" class="project__image">
+            <div class="project__logo project__logo_{{ item.name }}">
+              {{mixins.icon(item.logo)}}
             </div>
             <div class="project__footer">
               <p class="project__date">{{ item.date }}</p>
