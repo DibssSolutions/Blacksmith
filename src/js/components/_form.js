@@ -6,7 +6,7 @@ const phoneReg = /^(\+([0-9]{1,3}))?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[
 const mailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 function nameIsValid(item) {
-  if (item.val().length > 4) {
+  if (item.val().length >= 2) {
     item.removeClass('form__input_invalid');
     return true;
   } else {
