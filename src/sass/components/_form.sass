@@ -1,0 +1,100 @@
+.form
+	+animate
+	margin-top: 30px
+	transition-duration: 175ms
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+	&__input
+		+animate
+		transition-duration: 175ms
+		position: relative
+		font-size: 18px
+		margin-top: 7px
+		min-height: 64px
+		max-width: 660px
+		width: 100%
+		border: 1px solid #d8d8d8
+		border-radius: 5px
+		padding: 20px 24px
+		&::placeholder
+			font-size: 14px
+			+helvetica
+			color: #6c6c6c
+		&:focus
+			border-color: $purple
+
+	&__input_invalid
+		border-color: red
+
+	&__input_invalid + &__validation-message
+		opacity: 1
+		max-height: 20px
+
+	&__validation-message
+		+helvetica
+		transition-property: opacity, max-height
+		transition-duration: 300ms
+		max-height: 0
+		opacity: 0
+		color: red
+		font-size: 12px
+		font-weight: 300
+		margin-top: 4px
+
+	&__textarea
+		resize: none
+		padding: 24px 24px
+
+	&__file-label
+		+animate
+		transition-duration: 175ms
+		margin-top: 30px
+		max-width: 494px
+		width: 100%
+		cursor: pointer
+		display: flex
+		align-items: center
+		&:before
+			flex-shrink: 0
+			content: ''
+			display: block
+			width: 30px
+			height: 38px
+			background: url("../img/input-file.svg") no-repeat center
+			margin-right: 20px
+		+hover
+			text-decoration: none
+			color: rgba(#353535, .7)
+
+	&__file-text
+		color: #353535
+
+	&__input-file
+		display: none
+
+	&__policy
+		+animate
+		line-height: 2
+		transition-duration: 175ms
+		margin-top: 20px
+		font-size: 14px
+		font-weight: 300
+		color: $text-dark-gray
+
+	&__link
+		color: $text-dark-gray
+
+	&__button
+		+animate
+		transition-duration: 175ms
+		margin-top: 16px
+
+	&__button-text
+		pointer-events: none
+		position: relative
+
+	&__animate
+		opacity: 0
+		transform: translateY(-32px)

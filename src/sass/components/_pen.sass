@@ -1,5 +1,19 @@
 .pen
+	+helvetica
+	z-index: 6
 	position: fixed
+
+	&__background
+		pointer-events: none
+		z-index: 1
+		position: fixed
+		width: 0
+		height: 0
+		transform: translateX(50%) translateY(50%)
+		background-color: $white
+		bottom: 0
+		right: 0
+		border-radius: 50%
 
 	&__button
 		transition: transform 300ms
@@ -38,27 +52,36 @@
 			.icon
 				font-size: 20px
 
+	&__container
+		position: relative
+
 	&__content
-		transition: transform 300ms
-		transform: scale(0)
-		transform-origin: 100% 100%
+		padding: 30px 0
+		transition: transform 300ms, opacity 300ms
+		transform: translateY(100px)
+		pointer-events: none
+		z-index: 6
 		position: fixed
-		bottom: 24px
-		right: 24px
-		width: 500px
-		height: 500px
-		border-radius: 10px
-		background-color: $white
-		border: 1px solid $black
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		min-height: 100%
+		overflow: auto
+
+		background-size: cover
+		opacity: 0
 
 	&__content_opened
-		transform: scale(1)
+		transform: translateY(0)
+		pointer-events: auto
+		opacity: 1
 
 	&__close
 		position: absolute
 		display: flex
 		align-items: center
-		top: 8px
+		top: 4px
 		right: 8px
 		transition-duration: 150ms
 		cursor: pointer
@@ -80,8 +103,6 @@
 			position: absolute
 			width: 100%
 			height: 2px
-			left: 0
-			top: 0
 			background-color: $black
 
 		&:before
@@ -89,3 +110,18 @@
 
 		&:after
 			transform: rotate(-45deg)
+
+	&__form
+
+	&__subtitle
+		+animate
+		transition-duration: 175ms
+		margin-top: 14px
+
+	&__cta
+		+animate
+		transition-duration: 175ms
+		margin-top: 12px
+		color: #b61df3
+		font-size: 32px
+		font-weight: 700

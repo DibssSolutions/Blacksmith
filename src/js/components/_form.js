@@ -1,42 +1,39 @@
-let name = $('#name');
-let phone = $('#phone');
-let mail = $('#mail');
-let file = $('#file');
-let label = $('.js-file-label');
-let submit = $('#submit');
+let file = $('.js-form-file');
+let submit = $('.js-form-submit');
+let container = $('.js-form');
 
 const phoneReg = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
-const mailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const mailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-function nameIsValid() {
-  if (name.val().length > 4) {
-    name.removeClass('cta__input_invalid');
+function nameIsValid(item) {
+  if (item.val().length > 4) {
+    item.removeClass('form__input_invalid');
     return true;
   } else {
-    runShakeInit(name);
-    name.addClass('cta__input_invalid');
+    runShakeInit(item);
+    item.addClass('form__input_invalid');
     return false;
   }
 }
 
-function phoneIsValid() {
-  if (phoneReg.test(phone.val())) {
-    phone.removeClass('cta__input_invalid');
+function phoneIsValid(item) {
+  if (phoneReg.test(item.val())) {
+    item.removeClass('form__input_invalid');
     return true;
   } else {
-    runShakeInit(phone);
-    phone.addClass('cta__input_invalid');
+    runShakeInit(item);
+    item.addClass('form__input_invalid');
     return false;
   }
 }
 
-function mailIsValid() {
-  if (mailReg.test(mail.val())) {
-    mail.removeClass('cta__input_invalid');
+function mailIsValid(item) {
+  if (mailReg.test(item.val())) {
+    item.removeClass('form__input_invalid');
     return true;
   } else {
-    runShakeInit(mail);
-    mail.addClass('cta__input_invalid');
+    runShakeInit(item);
+    item.addClass('form__input_invalid');
     return false;
   }
 }
@@ -56,27 +53,34 @@ function runShakeInit(item) {
   }, 50);
 }
 
-function isValidForm() {
+function isValidForm(container) {
   let isValid = true;
+  let name = container.find('.js-form-name');
+  let phone = container.find('.js-form-phone');
+  let mail = container.find('.js-form-mail');
 
-  isValid = (nameIsValid() ? isValid : false);
-  isValid = (phoneIsValid() ? isValid : false);
-  isValid = (mailIsValid() ? isValid : false);
-
+  isValid = (nameIsValid(name) ? isValid : false);
+  isValid = (phoneIsValid(phone) ? isValid : false);
+  isValid = (mailIsValid(mail) ? isValid : false);
 
   return isValid;
 }
 
 $(window).ready(() => {
 
-  file.change(() => {
-    label.text(file.val().replace(/C:\\fakepath\\/i, ''));
+
+  file.each(function() {
+    $(this).change((event) => {
+      let label = $(event.target).parents('.js-form').find('.js-file-label');
+      label.text($(this).val().replace(/C:\\fakepath\\/i, ''));
+    });
   });
 
-  submit.click(() => {
-    if (isValidForm()) {
+  submit.click((event) => {
+    if (isValidForm($(event.target).parent('.js-form'))) {
       console.log('done');
     }
+
   });
 });
 

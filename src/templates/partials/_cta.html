@@ -2,25 +2,25 @@
   <div class="cta__container container">
     <p class="cta__subtitle title title_sm cta__animate">Хотите рассчитать стоимость своего сайта?</p>
     <p class="cta__cta cta__animate">Напишите нам!</p>
-    <form action="/" class="cta__form">
-      <input id="name" type="text" class="cta__input cta__animate" placeholder="Ваше имя"/>
-      <span class="cta__validation-message">Имя должно быть больше 4 символов</span>
-      <input id="phone" type="tel" class="cta__input cta__animate" placeholder="Телефон"/>
-      <span class="cta__validation-message">Пожалуйста, введите правильный номер телефона</span>
-      <input id="mail" type="email" class="cta__input cta__animate" placeholder="Электронная почта"/>
-      <span class="cta__validation-message">Пожалуйста, введите правильный адрес</span>
-      <textarea name="about" id="about" rows="5" class=" cta__input cta__textarea cta__animate"
+    <form action="/" class="cta__form form js-form">
+      <input id="name" type="text" class="form__input cta__animate js-form-name" placeholder="Ваше имя"/>
+      <span class="form__validation-message">Имя должно быть больше 4 символов</span>
+      <input id="phone" type="tel" class="form__input cta__animate js-form-phone" placeholder="Телефон"/>
+      <span class="form__validation-message">Пожалуйста, введите правильный номер телефона</span>
+      <input id="mail" type="email" class="form__input cta__animate js-form-mail" placeholder="Электронная почта"/>
+      <span class="form__validation-message">Пожалуйста, введите правильный адрес</span>
+      <textarea name="about" id="about" rows="5" class=" form__input form__textarea cta__animate"
                 placeholder="Расскажите о вашем проекте"></textarea>
-      <label class="cta__file-label cta__animate">
-        <input id="file" type="file" class="cta__input-file"/>
-        <span class="cta__file-text underline-link js-file-label">Прикрепить бриф или тех. задание</span>
+      <label class="form__file-label cta__animate">
+        <input id="file" type="file" class="form__input-file js-form-file"/>
+        <span class="form__file-text underline-link js-file-label">Прикрепить бриф или тех. задание</span>
       </label>
-      <p class="cta__policy cta__animate">
+      <p class="form__policy cta__animate">
         Отправляя данные, я принимаю условия оферты и согласен с <br/>
-        <a href="#" class="cta__link underline-link underline-link_gray"> Политикой конфиденциальности</a>
+        <a href="#" class="form__link underline-link underline-link_gray"> Политикой конфиденциальности</a>
       </p>
 
-      <button id="submit" type="button" class="cta__button button button_purple button_uppercase button_lg js-form-submit cta__animate"><span class="cta__button-text">Отправить</span></button>
+      <button id="submit" type="button" class="form__button button button_purple button_uppercase button_lg js-form-submit cta__animate"><span class="form__button-text">Отправить</span></button>
     </form>
   </div>
 </section>
