@@ -58,11 +58,13 @@
 		content: ''
 		pointer-events: none
 		position: absolute
-		background: url("../img/iphone-mac.png") no-repeat 745px calc(50% + 24px)
+		background: url("../img/iphone-mac.png") no-repeat calc(100% + 170px) calc(50% + 24px)
 		top: 0
 		left: 0
-		width: 200%
+		width: 100%
 		height: 100%
+		+r(1350)
+			background-position-x: 680px
 
 	&__image_animate
 		left: 100px
