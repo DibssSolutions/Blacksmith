@@ -27,11 +27,9 @@
 		background-color: $white
 		box-shadow: 0 1px 12px rgba(0,0,0,.1)
 		.header__logo
-			.header__logo-image
-				width: 103px
-				height: 37px
-				background: url("../img/logo.png") no-repeat center
-				background-size: cover
+			.icon
+				font-size: 40px
+				fill: $black
 		.header__link
 			color: $black
 			+hover
@@ -55,17 +53,13 @@
 
 	&__logo
 		+animate
-		.header__logo-image
-			width: 145px
-			height: 52px
-			background: url("../img/logo-white.png") no-repeat center
-			background-size: cover
+		.icon
+			font-size: 55px
+			fill: $white
 		+md
-			.header__logo-image
-				width: 103px
-				height: 37px
-				background: url("../img/logo.png") no-repeat center
-				background-size: cover
+			.icon
+				font-size: 40px
+				fill: $black
 
 	&__menu
 		margin-top: 8px
