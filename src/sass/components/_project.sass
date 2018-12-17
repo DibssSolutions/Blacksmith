@@ -10,12 +10,13 @@
 	border-radius: 10px
 	min-height: 328px
 	height: 328px
+	+md
+		height: 260px
+		min-height: 260px
 	+sm
 		width: 100%
 		max-width: 100%
-	+r(480)
-		height: 260px
-		min-height: 260px
+
 	&_active
 		transition: none
 
@@ -60,20 +61,19 @@
 
 	&__logo_bamboobar
 		.icon
-			font-size: 45px
+		font-size: 45px
 
 	&__logo_your-house
 		.icon
-			font-size: 51px
+		font-size: 51px
 
 	&__logo_cityvoice
 		.icon
-			font-size: 95px
+		font-size: 95px
 
 	&__logo_musictown
 		.icon
-			font-size: 97px
-
+		font-size: 97px
 
 
 	&__footer

@@ -1,0 +1,25 @@
+<div class="scroll-navigation">
+  <ul class="scroll-navigation__list">
+    {% for item in [
+      {
+        title: 'Процесс',
+        id: 'process'
+      },
+      {
+        title: 'Портфолио',
+        id: 'projects'
+      },
+      {
+        title: 'Стоимость',
+        id: 'estimation'
+      },
+      {
+        title: 'Связаться',
+        id: 'cta'
+      }] %}
+      <li class="scroll-navigation__item">
+        <a href="#{{item.id}}" class="scroll-navigation__link js-scroll-navigation-link">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
