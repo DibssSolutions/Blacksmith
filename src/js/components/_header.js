@@ -10,8 +10,7 @@ function getScrollValue(toScrollItem) {
     0 :
     +offsetString.slice(6,offsetString.length - 1).split(',')[5];
   let position = toScrollItem.offset().top;
-  let headerHeight = 65;
-  return position - yOffset - headerHeight;
+  return position - yOffset;
 }
 
 $(window).ready(() => {
@@ -28,9 +27,9 @@ $(window).ready(() => {
     }
   });
 
-  if ($(window).scrollTop() > 0) {
-    header.addClass('header_scrolled');
-  }
+  // if ($(window).scrollTop() > 0) {
+  //   header.addClass('header_scrolled');
+  // }
 
   if ($(window).outerWidth() < 1023) {
     menu.css({
@@ -48,13 +47,13 @@ $(window).ready(() => {
     }
   });
 
-  $(window).scroll(() => {
-    if ($(window).scrollTop() > 0) {
-      header.addClass('header_scrolled');
-    } else {
-      header.removeClass('header_scrolled');
-    }
-  });
+  // $(window).scroll(() => {
+  //   if ($(window).scrollTop() > 0) {
+  //     header.addClass('header_scrolled');
+  //   } else {
+  //     header.removeClass('header_scrolled');
+  //   }
+  // });
 
   $(window).click(function(event) {
     let target = $(event.target);
