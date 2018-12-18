@@ -15,9 +15,9 @@ function isScrolledTo(elem) {
   const docViewTop = $(window).scrollTop();
 
   let elemTop = elem.offset().top;
-  // let elemBottom = elemTop + elem.height();
+  let elemBottom = elemTop + elem.outerHeight();
   // return (((elemBottom - yOffset) <= docViewBottom) && ((elemTop - yOffset) >= docViewTop));
-  return (elemTop <= docViewTop);
+  return ((~~elemTop <= docViewTop) && (~~elemBottom > docViewTop));
 }
 
 function isScrollOnTop() {
@@ -27,6 +27,7 @@ function isScrollOnTop() {
 }
 
 function updateScrollNavigationActiveItem(item) {
+  console.log('updateScrollNavigationActiveItem');
   links.each(function() {
     if (item.is($(this))) {
       $(this).parent('.scroll-navigation__item').addClass('scroll-navigation__item_active');
