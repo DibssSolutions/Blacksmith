@@ -31,11 +31,14 @@
 		border-radius: 50%
 		+hover
 			transform: scale(1.05)
+
 		&:active
 			opacity: .85
+
 		+sm
 			width: 36px
 			height: 36px
+
 	&__button_closed
 		transform: scale(0)
 
@@ -58,6 +61,9 @@
 		padding-top: 30px
 		padding-bottom: 30px
 		position: relative
+		+md
+			padding-top: 30px
+			padding-bottom: 30px
 
 	&__content
 		display: flex
@@ -85,8 +91,8 @@
 		position: absolute
 		display: flex
 		align-items: center
-		top: 8px
-		right: 8px
+		top: 45px
+		right: 15px
 		transition-duration: 150ms
 		cursor: pointer
 		margin-left: auto
