@@ -110,7 +110,7 @@
 			padding: 16px 0
 
 	&__link
-		transition: border 300ms
+		transition: opacity 300ms
 		font-size: 16px
 		display: flex
 		align-items: center
@@ -119,13 +119,11 @@
 		.icon
 			font-size: 16px
 		+hover
-			border-bottom: 1px solid $white
+			opacity: 0.8
 		.icon
 			margin-right: 9px
 		+md
 			color: $black
-			+hover
-				border-bottom: 1px solid $black
 
 	&__toggle
 		transition-duration: 150ms
