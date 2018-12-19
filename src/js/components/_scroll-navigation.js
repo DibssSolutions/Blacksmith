@@ -1,6 +1,7 @@
 import {SCROLL_TO} from '../utils';
 
 var links = $('.js-scroll-navigation-link');
+var scrollItem = $('.js-scroll-navigation');
 
 function getScrollValue(toScrollItem) {
   let offsetString = toScrollItem.css('transform');
@@ -27,7 +28,7 @@ function isScrollOnTop() {
 }
 
 function updateScrollNavigationActiveItem(item) {
-  console.log('updateScrollNavigationActiveItem');
+  scrollItem.removeClass('scroll-navigation_hided');
   links.each(function() {
     if (item.is($(this))) {
       $(this).parent('.scroll-navigation__item').addClass('scroll-navigation__item_active');
@@ -38,6 +39,7 @@ function updateScrollNavigationActiveItem(item) {
 }
 
 function clearScrollNavigationItems() {
+  scrollItem.addClass('scroll-navigation_hided');
   links.each(function() {
     $(this).parent('.scroll-navigation__item').removeClass('scroll-navigation__item_active');
   });

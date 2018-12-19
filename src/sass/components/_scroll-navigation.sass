@@ -3,12 +3,19 @@
 	position: fixed
 	right: 15px
 	top: 50%
-	transform: translateY(-50%)
+	transform-origin: right 50%
+	transform: scaleX(1) translateY(-50%)
+	transition: 100ms
+	opacity: 1
 	+md
 		display: none
 
+	&_hided
+		opacity: 0
+		transform: scaleX(0) translateY(-50%)
+
 	&__list
-		min-height: 175px
+		min-height: 150px
 		display: flex
 		flex-direction: column
 		justify-content: space-between
@@ -35,37 +42,45 @@
 			background-color: $purple
 			border-radius: 500px
 		&:before
-			transition: 300ms
+			transition: 150ms
 			content: ''
 			background-color: transparent
+			transform: scaleX(0.85)
+			transform-origin: right 50%
 			border-radius: 500px
 			position: absolute
 			width: calc(100% + 8px)
-			height: calc(100% + 8px)
+			height: calc(100% + 5px)
 			left: -2.5px
-			top: -4px
+			top: -2.5px
 		+hover
 			&:before
 				background-color: $purple
+				transform: scaleX(1)
 			&:after
 				background-color: $white
 			.scroll-navigation__link
 				transform: scale(1)
+				pointer-events: auto
+				opacity: 1
 
 	&__item_active
 		&:before
 			background-color: $purple
+			transform: scaleX(1)
 		&:after
 			background-color: $white
 		.scroll-navigation__link
 			transform: scale(1)
+			opacity: 1
 
 	&__link
 		transform-origin: right 50%
-		transition: 300ms
-		transform: scale(0)
+		transition: 100ms
+		transform: scale(0.8)
+		opacity: 0
 		padding-right: 29px
-		padding-left: 9px
+		padding-left: 14px
 		position: relative
 		+helvetica
 		color: $white
