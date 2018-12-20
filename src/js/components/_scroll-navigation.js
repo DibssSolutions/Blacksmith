@@ -18,13 +18,13 @@ function isScrolledTo(elem) {
   let elemTop = elem.offset().top;
   let elemBottom = elemTop + elem.outerHeight();
   // return (((elemBottom - yOffset) <= docViewBottom) && ((elemTop - yOffset) >= docViewTop));
-  return ((~~elemTop <= docViewTop) && (~~elemBottom > docViewTop));
+  return ((~~elemTop <= (docViewTop + (elem.outerHeight()* 0.5))) && (~~elemBottom > docViewTop));
 }
 
 function isScrollOnTop() {
   const docViewTop = $(window).scrollTop();
 
-  return (docViewTop < $(window).height());
+  return (docViewTop < ($(window).height() * 0.6));
 }
 
 function updateScrollNavigationActiveItem(item) {
