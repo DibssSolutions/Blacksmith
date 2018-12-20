@@ -29,7 +29,6 @@ function isScrollOnTop() {
 }
 
 function updateScrollNavigationActiveItem(item) {
-  console.log('updateScrollNavigationActiveItem');
   scrollItem.removeClass('scroll-navigation_hided');
   links.each(function() {
     if (item.is($(this))) {
@@ -41,7 +40,6 @@ function updateScrollNavigationActiveItem(item) {
 }
 
 function clearScrollNavigationItems() {
-  console.log('clearScrollNavigationItems');
   scrollItem.addClass('scroll-navigation_hided');
   links.each(function() {
     $(this).parent('.scroll-navigation__item').removeClass('scroll-navigation__item_active');
@@ -52,7 +50,8 @@ function initScrollNavigation() {
   links.each(function() {
     let item = $(this);
     if (isScrollOnTop()) {
-      clearScrollNavigationItems();
+      if(!scrollItem.hasClass('scroll-navigation_hided'))
+        clearScrollNavigationItems();
     } else if (isScrolledTo($(item.attr('href')))) {
       if (!item.parent('.scroll-navigation__item').hasClass('scroll-navigation__item_active')) {
         updateScrollNavigationActiveItem(item);
