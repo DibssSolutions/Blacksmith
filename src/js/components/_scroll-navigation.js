@@ -14,11 +14,12 @@ function getScrollValue(toScrollItem) {
 
 function isScrolledTo(elem) {
   const docViewTop = $(window).scrollTop();
+  const halfWindowHeight = ~~($(window).height() / 2);
 
-  let elemTop = elem.offset().top;
-  let elemBottom = elemTop + elem.outerHeight();
+  let elemTop = ~~(elem.offset().top);
+  let elemBottom = ~~(elemTop + elem.outerHeight());
   // return (((elemBottom - yOffset) <= docViewBottom) && ((elemTop - yOffset) >= docViewTop));
-  return ((~~elemTop <= (docViewTop + (elem.outerHeight()* 0.5))) && (~~elemBottom > docViewTop));
+  return ((elemTop <= (docViewTop + halfWindowHeight) && (elemBottom > (docViewTop + halfWindowHeight))));
 }
 
 function isScrollOnTop() {
@@ -28,6 +29,7 @@ function isScrollOnTop() {
 }
 
 function updateScrollNavigationActiveItem(item) {
+  console.log('updateScrollNavigationActiveItem');
   scrollItem.removeClass('scroll-navigation_hided');
   links.each(function() {
     if (item.is($(this))) {
@@ -39,6 +41,7 @@ function updateScrollNavigationActiveItem(item) {
 }
 
 function clearScrollNavigationItems() {
+  console.log('clearScrollNavigationItems');
   scrollItem.addClass('scroll-navigation_hided');
   links.each(function() {
     $(this).parent('.scroll-navigation__item').removeClass('scroll-navigation__item_active');
