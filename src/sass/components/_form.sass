@@ -28,12 +28,11 @@
 
 	&__input_invalid
 		border-color: red
+	&__validation-hidden
+		display: none!important
 
-	&__input_invalid + &__validation-message
-		opacity: 1
-		max-height: 20px
-
-	&__validation-message
+	&__validation-message,
+	label.error
 		+helvetica
 		transition-property: opacity, max-height
 		transition-duration: 300ms
@@ -43,6 +42,11 @@
 		font-size: 12px
 		font-weight: 300
 		margin-top: 4px
+
+	&__input_invalid + &__validation-message,
+	label.error
+		opacity: 1
+		max-height: 20px
 
 	&__textarea
 		resize: none

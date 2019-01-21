@@ -21,6 +21,44 @@ a
 html
 	background-color: #1f1f1f
 
+.message-sending
+	display: none
+	position: fixed
+	z-index: 10
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(#363636,.7)
+	user-select: none
+	+vertical
+	+gpu
+	overflow: auto
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	&__container
+		position: relative
+		z-index: 1
+		font-size: 27px
+		font-weight: 700
+		vertical-align: middle
+		display: inline-block
+		max-width: 430px
+		width: 100%
+		padding: 0 15px
+	&__inner
+		padding: 60px 40px 35px
+		max-width: 100%
+		background-color: $white
+		border-radius: 10px
+		+xs
+			padding: 45px 15px
+	&__x
+		position: absolute
+		top: 20px
+		right: 40px
+		background-color: transparent
+		font-size: 17px
+
 
 
 

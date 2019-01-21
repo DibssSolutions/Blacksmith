@@ -2,13 +2,14 @@
   <div class="cta__container container">
     <p class="cta__subtitle title title_sm cta__animate">Хотите рассчитать стоимость своего сайта?</p>
     <p class="cta__cta cta__animate">Напишите нам!</p>
-    <form action="/" class="cta__form form js-form">
-      <input id="name" type="text" class="form__input cta__animate js-form-name" placeholder="Ваше имя"/>
+    <form action="form.php" class="cta__form form js-form" method="POST">
+      <input id="name" name="name" type="text" class="form__input cta__animate js-form-name" placeholder="Ваше имя"/>
       <span class="form__validation-message">Имя должно быть не менее двух символов</span>
-      <input id="phone" type="tel" class="form__input cta__animate js-form-phone" placeholder="Телефон"/>
+      <input id="phone" name="phone" type="tel" class="form__input cta__animate js-form-phone" placeholder="Телефон"/>
       <span class="form__validation-message">Пожалуйста, введите правильный номер телефона</span>
-      <input id="mail" type="email" class="form__input cta__animate js-form-mail" placeholder="Электронная почта"/>
+      <input id="mail" name="email" type="email" class="form__input cta__animate js-form-mail" placeholder="Электронная почта"/>
       <span class="form__validation-message">Пожалуйста, введите правильный адрес</span>
+      {# <span class="form__validation-hidden"></span> #}
       <textarea name="about" id="about" rows="5" class=" form__input form__textarea cta__animate"
                 placeholder="Расскажите о вашем проекте"></textarea>
       <label class="form__file-label cta__animate">
@@ -19,8 +20,8 @@
         Отправляя данные, я принимаю условия оферты и согласен с <br/>
         <a href="#" class="form__link underline-link underline-link_gray"> Политикой конфиденциальности</a>
       </p>
-
-      <button id="submit" type="button" class="form__button button button_purple button_uppercase button_lg js-form-submit cta__animate"><span class="form__button-text">Отправить</span></button>
+      <div class="form__validation-hidden"></div>
+      <button id="submit" type="submit" class="form__button button button_purple button_uppercase button_lg js-form-submit"><span class="form__button-text">Отправить</span></button>
     </form>
   </div>
 </section>

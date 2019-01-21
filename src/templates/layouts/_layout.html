@@ -14,6 +14,24 @@
 
     <!-- BEGIN content -->
     <div class="out">
+
+      <div class="js-success message-sending js-message-sending">
+        <div class="message-sending__container">
+          <div class="message-sending__inner js-message-sending-inner">
+            Спасибо, что оставили заявку, в ближайшее время мы обязательно с вами свяжемся!
+          </div>
+          <button class="message-sending__x js-close">&#10006;</button>
+        </div>
+      </div>
+    
+      <div class="js-error message-sending js-message-sending">
+        <div class="message-sending__container">
+          <div class="message-sending__inner js-message-sending-inner js-error-block">
+            
+          </div>
+          <button class="message-sending__x js-close">&#10006;</button>
+        </div>
+      </div>
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->
