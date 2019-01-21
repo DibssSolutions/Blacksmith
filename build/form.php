@@ -18,7 +18,7 @@
 		<body>'
 		   .' <p>Имя: <strong>' . $name . '</strong></p>'
 		   .' <p>Телефон: <strong>' . $phone . '</strong></p>'
-           .' <p>Телефон: <strong>' . $email . '</strong></p>'
+           .' <p>Email: <strong>' . $email . '</strong></p>'
            .'<p>Сообщение: ' . $message . '</p>'
 		.'</body>
 		</html>';
